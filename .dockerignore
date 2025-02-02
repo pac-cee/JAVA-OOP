@@ -1,9 +1,0 @@
-.git
-.gitignore
-*.class
-target/
-.idea/
-*.iml
-.vscode/
-Dockerfile
-.dockerignore
