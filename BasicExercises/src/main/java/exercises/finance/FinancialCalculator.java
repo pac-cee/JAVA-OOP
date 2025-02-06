@@ -1,24 +1,28 @@
 package exercises.finance;
 
 public class FinancialCalculator {
+    private static final double UNIT_RATE_1 = 0.50;  // First 100 units
+    private static final double UNIT_RATE_2 = 0.75;  // Next 200 units
+    private static final double UNIT_RATE_3 = 1.20;  // Above 300 units
+
     public static double calculateBonus(double salary, int yearsOfService) {
-        if (yearsOfService > 10) {
-            return salary * 0.15;
-        } else if (yearsOfService >= 5) {
+        if (yearsOfService < 5) {
+            return salary * 0.05;
+        } else if (yearsOfService <= 10) {
             return salary * 0.10;
         } else {
-            return salary * 0.05;
+            return salary * 0.15;
         }
     }
 
     public static double calculateElectricityBill(int units) {
         double bill = 0;
         if (units <= 100) {
-            bill = units * 0.50;
+            bill = units * UNIT_RATE_1;
         } else if (units <= 300) {
-            bill = (100 * 0.50) + ((units - 100) * 0.75);
+            bill = (100 * UNIT_RATE_1) + ((units - 100) * UNIT_RATE_2);
         } else {
-            bill = (100 * 0.50) + (200 * 0.75) + ((units - 300) * 1.20);
+            bill = (100 * UNIT_RATE_1) + (200 * UNIT_RATE_2) + ((units - 300) * UNIT_RATE_3);
         }
         return bill;
     }
@@ -28,44 +32,51 @@ public class FinancialCalculator {
     }
 
     public static double convertCurrency(double amount, String fromCurrency, String toCurrency) {
-        // Example conversion rates (in real application, these would be fetched from an API)
-        double usdToEur = 0.85;
-        double usdToGbp = 0.73;
-        double usdToInr = 73.5;
-
-        // First convert to USD if not already
-        double usdAmount = amount;
-        switch (fromCurrency.toUpperCase()) {
-            case "EUR": usdAmount = amount / usdToEur; break;
-            case "GBP": usdAmount = amount / usdToGbp; break;
-            case "INR": usdAmount = amount / usdToInr; break;
+        // Example conversion rates (in real application, these would come from an API)
+        double[][] rates = {
+            //USD   EUR    GBP    INR
+            {1.0,   0.85,  0.75,  82.0},  // USD
+            {1.18,  1.0,   0.88,  96.5},  // EUR
+            {1.33,  1.13,  1.0,   109.3}, // GBP
+            {0.012, 0.010, 0.009, 1.0}    // INR
+        };
+        
+        int fromIndex = getCurrencyIndex(fromCurrency);
+        int toIndex = getCurrencyIndex(toCurrency);
+        
+        if (fromIndex == -1 || toIndex == -1) {
+            throw new IllegalArgumentException("Unsupported currency");
         }
+        
+        return amount * rates[fromIndex][toIndex];
+    }
 
-        // Then convert USD to target currency
-        switch (toCurrency.toUpperCase()) {
-            case "EUR": return usdAmount * usdToEur;
-            case "GBP": return usdAmount * usdToGbp;
-            case "INR": return usdAmount * usdToInr;
-            default: return usdAmount; // USD
-        }
+    private static int getCurrencyIndex(String currency) {
+        return switch (currency.toUpperCase()) {
+            case "USD" -> 0;
+            case "EUR" -> 1;
+            case "GBP" -> 2;
+            case "INR" -> 3;
+            default -> -1;
+        };
     }
 
     public static double calculateDiscount(double amount, String customerType) {
-        switch (customerType.toUpperCase()) {
-            case "VIP": return amount * 0.20;        // 20% discount
-            case "PREMIUM": return amount * 0.15;    // 15% discount
-            case "REGULAR": return amount * 0.10;    // 10% discount
-            default: return 0;
-        }
+        return amount * switch (customerType.toUpperCase()) {
+            case "REGULAR" -> 0.05;  // 5% discount
+            case "PREMIUM" -> 0.10;  // 10% discount
+            case "VIP" -> 0.15;     // 15% discount
+            default -> 0.0;         // No discount
+        };
     }
 
     public static double getVehicleFee(String vehicleType) {
-        switch (vehicleType.toLowerCase()) {
-            case "car": return 5.00;
-            case "truck": return 10.00;
-            case "motorcycle": return 3.00;
-            case "bus": return 15.00;
-            default: return 0.00;
-        }
+        return switch (vehicleType.toLowerCase()) {
+            case "car" -> 50.0;
+            case "truck" -> 100.0;
+            case "motorcycle" -> 25.0;
+            case "bus" -> 75.0;
+            default -> throw new IllegalArgumentException("Unknown vehicle type");
+        };
     }
 }

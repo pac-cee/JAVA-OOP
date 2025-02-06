@@ -2,27 +2,36 @@ package exercises.security;
 
 public class SecurityValidator {
     public static boolean isPasswordValid(String password) {
-        boolean hasUpperCase = false;
+        if (password == null || password.length() < 8) {
+            return false;
+        }
+
         boolean hasNumber = false;
+        boolean hasUpper = false;
+        boolean hasLower = false;
         boolean hasSpecial = false;
         String specialChars = "!@#$%^&*()_+-=[]{}|;:,.<>?";
-        
-        if (password.length() < 8) return false;
-        
+
         for (char c : password.toCharArray()) {
-            if (Character.isUpperCase(c)) hasUpperCase = true;
             if (Character.isDigit(c)) hasNumber = true;
-            if (specialChars.contains(String.valueOf(c))) hasSpecial = true;
+            else if (Character.isUpperCase(c)) hasUpper = true;
+            else if (Character.isLowerCase(c)) hasLower = true;
+            else if (specialChars.indexOf(c) >= 0) hasSpecial = true;
         }
-        
-        return hasUpperCase && hasNumber && hasSpecial;
+
+        return hasNumber && hasUpper && hasLower && hasSpecial;
     }
 
     public static String identifyOS(String osName) {
         osName = osName.toLowerCase();
-        if (osName.contains("windows")) return "Windows";
-        if (osName.contains("mac") || osName.contains("darwin")) return "macOS";
-        if (osName.contains("linux") || osName.contains("unix")) return "Linux";
-        return "Unknown OS";
+        if (osName.contains("win")) {
+            return "Windows";
+        } else if (osName.contains("mac")) {
+            return "macOS";
+        } else if (osName.contains("nix") || osName.contains("nux") || osName.contains("aix")) {
+            return "Linux/Unix";
+        } else {
+            return "Unknown OS";
+        }
     }
 }

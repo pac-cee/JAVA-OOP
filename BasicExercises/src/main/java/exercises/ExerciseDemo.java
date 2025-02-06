@@ -1,14 +1,20 @@
 package exercises;
 
+import exercises.arrays.ArrayOperations;
 import exercises.finance.FinancialCalculator;
+import exercises.formatting.StringFormatter;
 import exercises.game.NumberGuessingGame;
 import exercises.geometry.ShapeClassifier;
 import exercises.health.HealthCalculator;
+import exercises.input.UserInputProcessor;
 import exercises.numbers.NumberOperations;
+import exercises.random.RandomGenerator;
 import exercises.restaurant.RestaurantSystem;
 import exercises.security.SecurityValidator;
 import exercises.time.TimeGreeting;
 
+import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ExerciseDemo {
@@ -100,6 +106,50 @@ public class ExerciseDemo {
             if (answer.equalsIgnoreCase("yes")) {
                 NumberGuessingGame.playGame(scanner);
             }
+
+            // 21. Process User Input
+            System.out.println("\n=== Process User Input ===");
+            System.out.println("Processed value: " + UserInputProcessor.processNumericInput(scanner));
+
+            // 22. Swap Numbers
+            System.out.println("\n=== Swap Numbers ===");
+            int[] numbers = {5, 10};
+            System.out.println("Before swap: " + numbers[0] + ", " + numbers[1]);
+            UserInputProcessor.swapNumbers(numbers);
+            System.out.println("After swap: " + numbers[0] + ", " + numbers[1]);
+
+            // 23. Prime Numbers Array
+            System.out.println("\n=== First 10 Prime Numbers ===");
+            int[] primes = ArrayOperations.generateFirstNPrimes(10);
+            System.out.println(Arrays.toString(primes));
+
+            // 24. Random Number
+            System.out.println("\n=== Random Number ===");
+            System.out.println("Random number (1-100): " + RandomGenerator.generateNumber(1, 100));
+
+            // 25. DateTime Formatting
+            System.out.println("\n=== DateTime Formatting ===");
+            System.out.println("Formatted date: " + StringFormatter.formatDateTime(LocalDateTime.now()));
+
+            // 26. Name Formatting
+            System.out.println("\n=== Name Formatting ===");
+            System.out.println(StringFormatter.formatName("John", "Doe"));
+
+            // 27. Reverse Words
+            System.out.println("\n=== Reverse Words ===");
+            System.out.println(StringFormatter.reverseWords("Hello World Java"));
+
+            // 28. URL Generation
+            System.out.println("\n=== URL Generation ===");
+            System.out.println(StringFormatter.generateURL("John Doe"));
+
+            // 29. Log Message
+            System.out.println("\n=== Log Message ===");
+            System.out.println(StringFormatter.generateLogMessage("admin", "login"));
+
+            // 30. String Encoding
+            System.out.println("\n=== String Encoding ===");
+            System.out.println(StringFormatter.encodeString("Hello"));
         }
     }
 }
