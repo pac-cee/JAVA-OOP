@@ -1,4 +1,5 @@
 /*
+// 1. Write a Java program to find the type of a triangle based on the three sides.
  
 public class TriangleType {
     public static void main(String[] args) {
@@ -13,6 +14,7 @@ public class TriangleType {
     }
 }
 
+ /2. Write a Java program to check if a number is positive, negative, or zero.
 
 public class NumberCheck {
     public static void main(String[] args) {
@@ -33,7 +35,7 @@ public class NumberCheck {
     }
 }
 
-
+/3
 public class EmployeeBonus {
     public static void main(String[] args) {
         double salary = 50000;
