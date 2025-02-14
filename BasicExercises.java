@@ -174,38 +174,96 @@ public class BasicExercises {
 
     // Main method for testing
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        // Test triangle type
-        System.out.println(determineTriangleType(3, 3, 3));  // Equilateral
-        
-        // Test number properties
-        System.out.println(checkNumber(-4));  // negative and even
-        
-        // Test password validator
-        System.out.println(isPasswordValid("Pass123!"));  // true
-        
-        // Test greeting
-        System.out.println(getGreeting(14));  // Good Afternoon
-        
-        // Test palindrome
-        System.out.println(isPalindrome(12321));  // true
-        
-        // Test BMI calculator
-        System.out.println(calculateBMI(70, 1.75));  // Normal
-        
-        // Test electricity bill
-        System.out.println(calculateElectricityBill(250));  // 162.5
-        
-        // Test number game
-        // playNumberGame(scanner);
-        
-        // Test name formatter
-        System.out.println(formatName("John", "Doe"));  // Doe, John
-        
-        // Test reverse words
-        System.out.println(reverseWords("Hello World"));  // World Hello
-        
-        scanner.close();
+        try (Scanner scanner = new Scanner(System.in)) {
+            // 1. Triangle Type Tests
+            System.out.println("=== 1. Triangle Type Tests ===");
+            System.out.println("Triangle (3, 3, 3): " + determineTriangleType(3, 3, 3)); // Equilateral
+            System.out.println("Triangle (3, 3, 4): " + determineTriangleType(3, 3, 4)); // Isosceles
+            System.out.println("Triangle (3, 4, 5): " + determineTriangleType(3, 4, 5)); // Scalene
+
+            // 2. Number Properties Tests
+            System.out.println("\n=== 2. Number Properties Tests ===");
+            System.out.println("Number 5: " + checkNumber(5));     // positive and odd/even
+            System.out.println("Number -4: " + checkNumber(-4));   // negative and even
+            System.out.println("Number 0: " + checkNumber(0));     // zero and even
+
+            // 3. Employee Bonus Tests
+            System.out.println("\n=== 3. Employee Bonus Tests ===");
+            System.out.println("Bonus for salary 1000, 12 years: " + calculateBonus(1000, 12)); // 15%
+            System.out.println("Bonus for salary 1000, 5 years: " + calculateBonus(1000, 5));   // 10%
+            System.out.println("Bonus for salary 1000, 2 years: " + calculateBonus(1000, 2));   // 5%
+
+            // 4. Password Validator Tests
+            System.out.println("\n=== 4. Password Validator Tests ===");
+            System.out.println("Valid Password 'Pass123!': " + isPasswordValid("Pass123!"));   // true
+            System.out.println("Invalid Password 'password': " + isPasswordValid("password")); // false
+
+            // 5. Time-based Greeting Tests
+            System.out.println("\n=== 5. Time-based Greeting Tests ===");
+            System.out.println("Greeting for hour 2: " + getGreeting(2));   // Good Night
+            System.out.println("Greeting for hour 8: " + getGreeting(8));   // Good Morning
+            System.out.println("Greeting for hour 14: " + getGreeting(14)); // Good Afternoon
+            System.out.println("Greeting for hour 20: " + getGreeting(20)); // Good Evening
+            System.out.println("Greeting for hour 25: " + getGreeting(25)); // Invalid hour
+
+            // 6. Palindrome Check Tests
+            System.out.println("\n=== 6. Palindrome Check Tests ===");
+            System.out.println("Is 12321 a palindrome? " + isPalindrome(12321)); // true
+            System.out.println("Is 12345 a palindrome? " + isPalindrome(12345)); // false
+
+            // 7. BMI Calculator Tests
+            System.out.println("\n=== 7. BMI Calculator Tests ===");
+            System.out.println("BMI for weight 45, height 1.8: " + calculateBMI(45, 1.8));   // Underweight
+            System.out.println("BMI for weight 70, height 1.75: " + calculateBMI(70, 1.75)); // Normal
+            System.out.println("BMI for weight 85, height 1.80: " + calculateBMI(85, 1.80)); // Overweight
+            System.out.println("BMI for weight 95, height 1.70: " + calculateBMI(95, 1.70)); // Obese
+
+            // 8. Electricity Bill Tests
+            System.out.println("\n=== 8. Electricity Bill Tests ===");
+            System.out.println("Bill for 80 units: " + calculateElectricityBill(80));   // within first slab
+            System.out.println("Bill for 250 units: " + calculateElectricityBill(250)); // within second slab
+            System.out.println("Bill for 350 units: " + calculateElectricityBill(350)); // above 300 units
+
+            // 9. Loan Eligibility Tests
+            System.out.println("\n=== 9. Loan Eligibility Tests ===");
+            System.out.println("Eligible (Income 35000, Credit Score 720, Loans 1): " 
+                               + isEligibleForLoan(35000, 720, 1)); // Expected: true
+            System.out.println("Not Eligible (Income 25000, Credit Score 680, Loans 2): " 
+                               + isEligibleForLoan(25000, 680, 2)); // Expected: false
+
+            // 10. Number Guessing Game Test (Interactive)
+            System.out.println("\n=== 10. Number Guessing Game Test ===");
+            System.out.println("Note: This is an interactive game. Please follow the prompts.");
+            playNumberGame(scanner);
+
+            // 11. Number to Word Tests
+            System.out.println("\n=== 11. Number to Word Tests ===");
+            System.out.println("Digit 5: " + numberToWord(5));   // "Five"
+            System.out.println("Digit 10: " + numberToWord(10)); // Invalid digit
+
+            // 25. DateTime Formatting Test
+            System.out.println("\n=== 25. DateTime Formatting Test ===");
+            System.out.println("Current DateTime: " + formatDateTime());
+
+            // 26. Name Formatter Test
+            System.out.println("\n=== 26. Name Formatter Test ===");
+            System.out.println("Formatted Name (Alice, Smith): " + formatName("Alice", "Smith"));
+
+            // 27. Reverse Words Test
+            System.out.println("\n=== 27. Reverse Words Test ===");
+            System.out.println("Reversed 'Java Programming': " + reverseWords("Java Programming"));
+
+            // 28. URL Generator Test
+            System.out.println("\n=== 28. URL Generator Test ===");
+            System.out.println("URL for 'User_123': " + generateURL("User_123"));
+
+            // 29. Log Message Generator Test
+            System.out.println("\n=== 29. Log Message Generator Test ===");
+            System.out.println("Log Message: " + generateLogMessage("Alice", "logged in"));
+
+            // 30. String Encoder Test
+            System.out.println("\n=== 30. String Encoder Test ===");
+            System.out.println("Encoded 'abc': " + encodeString("abc"));
+        }
     }
 }
