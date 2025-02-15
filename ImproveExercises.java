@@ -1,18 +1,8 @@
-import java.util.Random;
-import java.util.Scanner;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Random;
+import java.util.Scanner;
 
-/**
- * ExercisesForTheBasics
- * 
- * This class contains static methods that solve 30 basic exercises in Java.
- * Each method is written with advanced clean code principles, includes meaningful
- * comments, and is designed to run without errors.
- * 
- * The main method below provides an interactive menu that uses a Scanner to read
- * user inputs for each exercise.
- */
 public class ImproveExercises {
 
     // 1. Determine triangle type based on three sides.
@@ -33,17 +23,12 @@ public class ImproveExercises {
     // 2. Check if a number is positive, negative, or zero and whether it is even or odd.
     public static String checkNumberProperties(int num) {
         StringBuilder result = new StringBuilder();
-        if (num > 0) {
-            result.append("Positive");
-        } else if (num < 0) {
-            result.append("Negative");
-        } else {
-            result.append("Zero");
-        }
+        result.append(num > 0 ? "Positive" : (num < 0 ? "Negative" : "Zero"));
         result.append(" and ");
         result.append((num % 2 == 0) ? "Even" : "Odd");
         return result.toString();
     }
+
 
     // 3. Calculate an employee's bonus based on years of service.
     //    Less than 5 years: 5%, 5-10 years: 10%, More than 10 years: 15%.
@@ -201,6 +186,19 @@ public class ImproveExercises {
             case "pizza" -> 8.99;
             case "salad" -> 4.99;
             case "soda" -> 1.99;
+            case "pasta" -> 10.99;
+            case "fries" -> 3.99;
+            case "drinks" -> 2.99;
+            case "sandwich" -> 6.99;
+            case "steak" -> 15.99;
+            case "chicken" -> 12.99;
+            case "fish" -> 14.99;
+            case "veggies" -> 7.99;
+            case "salmon" -> 18.99;
+            case "rice" -> 4.99;
+            case "beans" -> 0.99;
+            case "soup" -> 3.99;
+            case "bread" -> 1.99;
             default -> throw new IllegalArgumentException("Menu item not found: " + menuItem);
         };
     }
@@ -533,7 +531,7 @@ public class ImproveExercises {
                     }
                 }
                 case 13 -> {
-                    System.out.print("Enter menu item (Burger, Pizza, Salad, Soda): ");
+                    System.out.print("Enter menu item (Burger, Pizza, Salad, Soda, Pasta, Fries, Drinks, Sandwich, Steak, Chicken, Fish, Veggies, Salmon, Rice, Beans, Soup, Bread): ");
                     String menuItem = scanner.nextLine();
                     try {
                         System.out.println("Menu Price: $" + getMenuItemPrice(menuItem));
@@ -639,6 +637,7 @@ public class ImproveExercises {
                     String inputString = scanner.nextLine();
                     System.out.println("Encoded String: " + encodeString(inputString));
                 }
+    
                 default -> System.out.println("Invalid choice. Please try again.");
             }
             System.out.println(); // Extra line for spacing.
