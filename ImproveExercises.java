@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class ImproveExercises {
 
-    // 1. Determine triangle type based on three sides.
+    
     public static String determineTriangleType(double a, double b, double c) {
-        // Check if the sides form a valid triangle.
+        
         if (a + b <= c || a + c <= b || b + c <= a) {
             return "Not a valid triangle";
         }
@@ -20,7 +20,7 @@ public class ImproveExercises {
         }
     }
 
-    // 2. Check if a number is positive, negative, or zero and whether it is even or odd.
+   
     public static String checkNumberProperties(int num) {
         StringBuilder result = new StringBuilder();
         result.append(num > 0 ? "Positive" : (num < 0 ? "Negative" : "Zero"));
@@ -30,8 +30,7 @@ public class ImproveExercises {
     }
 
 
-    // 3. Calculate an employee's bonus based on years of service.
-    //    Less than 5 years: 5%, 5-10 years: 10%, More than 10 years: 15%.
+    
     public static double calculateBonus(double salary, int yearsOfService) {
         if (yearsOfService < 5) {
             return salary * 0.05;
@@ -42,8 +41,7 @@ public class ImproveExercises {
         }
     }
 
-    // 4. Check if a password meets security standards.
-    //    Must be at least 8 characters long, contain an uppercase letter, a number, and a special character.
+    
     public static boolean isPasswordValid(String password) {
         if (password == null || password.length() < 8) {
             return false;
@@ -63,7 +61,7 @@ public class ImproveExercises {
         return hasUpper && hasDigit && hasSpecial;
     }
 
-    // 5. Given the hour (0-23), return an appropriate greeting.
+   
     public static String getGreeting(int hour) {
         if (hour < 0 || hour > 23) {
             return "Invalid hour";
@@ -79,7 +77,7 @@ public class ImproveExercises {
         }
     }
 
-    // 6a. Reverse a given number.
+    
     public static int reverseNumber(int num) {
         int reversed = 0;
         while (num != 0) {
@@ -90,14 +88,14 @@ public class ImproveExercises {
         return reversed;
     }
 
-    // 6b. Check if a given number is a palindrome.
+   
     public static boolean isPalindromeNumber(int num) {
         String original = Integer.toString(num);
         String reversed = new StringBuilder(original).reverse().toString();
         return original.equals(reversed);
     }
 
-    // 7. Compute BMI from weight (kg) and height (m) and categorize it.
+   
     public static String calculateBMICategory(double weight, double height) {
         double bmi = weight / (height * height);
         if (bmi < 18.5) {
@@ -111,8 +109,6 @@ public class ImproveExercises {
         }
     }
 
-    // 8. Compute an electricity bill based on unit consumption.
-    //    First 100 units: $0.50 per unit, next 200 units: $0.75 per unit, above 300 units: $1.20 per unit.
     public static double calculateElectricityBill(int units) {
         double bill = 0;
         if (units <= 100) {
@@ -125,13 +121,12 @@ public class ImproveExercises {
         return bill;
     }
 
-    // 9. Determine if a person is eligible for a loan.
-    //    Criteria: income >= 30000, credit score >= 650, and less than 2 existing loans.
+    
     public static boolean isEligibleForLoan(double income, int creditScore, int existingLoans) {
         return (income >= 30000 && creditScore >= 650 && existingLoans < 2);
     }
 
-    // 10. A simple Rock-Paper-Scissors game: user vs. computer.
+    
     public static String playRockPaperScissors(String userMove) {
         String[] moves = {"Rock", "Paper", "Scissors"};
         Random random = new Random();
@@ -149,7 +144,7 @@ public class ImproveExercises {
         return "User: " + userMove + " | Computer: " + computerMove + " => " + result;
     }
 
-    // 11. Convert a digit (0-9) to its English word equivalent.
+
     public static String digitToWord(int digit) {
         return switch (digit) {
             case 0 -> "Zero";
@@ -166,8 +161,7 @@ public class ImproveExercises {
         };
     }
 
-    // 12. Convert an amount (in USD) to another currency.
-    //     Supported currencies: USD, EUR, GBP, INR.
+    
     public static double convertCurrency(double amount, String targetCurrency) {
         return switch (targetCurrency.toUpperCase()) {
             case "USD" -> amount;
@@ -178,8 +172,7 @@ public class ImproveExercises {
         };
     }
 
-    // 13. Return the price for a selected menu item.
-    //     Sample menu: Burger, Pizza, Salad, Soda.
+
     public static double getMenuItemPrice(String menuItem) {
         return switch (menuItem.toLowerCase()) {
             case "burger" -> 5.99;
@@ -203,7 +196,7 @@ public class ImproveExercises {
         };
     }
 
-    // 14. Convert a percentage into a grade (A, B, C, D, F) and provide feedback.
+    
     public static String gradeFromPercentage(double percentage) {
         if (percentage >= 90) {
             return "A - Excellent";
@@ -218,7 +211,7 @@ public class ImproveExercises {
         }
     }
 
-    // 15. Determine zodiac sign based on birth month and day.
+
     public static String getZodiacSign(int month, int day) {
         if (month < 1 || month > 12 || day < 1 || day > 31) {
             return "Invalid date";
@@ -252,7 +245,7 @@ public class ImproveExercises {
         }
     }
 
-    // 16. Classify a shape based on the number of sides.
+   
     public static String classifyShape(int sides) {
         return switch (sides) {
             case 3 -> "Triangle";
@@ -267,8 +260,6 @@ public class ImproveExercises {
         };
     }
 
-    // 17. Apply a discount based on customer category.
-    //     Categories: Regular (5%), Premium (10%), VIP (15%).
     public static double applyDiscount(double amount, String customerCategory) {
         return switch (customerCategory.toLowerCase()) {
             case "regular" -> amount * 0.95;
@@ -278,7 +269,7 @@ public class ImproveExercises {
         };
     }
 
-    // 18. Describe the movement of a given chess piece.
+    
     public static String chessPieceMovement(String piece) {
         return switch (piece.toLowerCase()) {
             case "king" -> "Moves one square in any direction";
@@ -291,7 +282,7 @@ public class ImproveExercises {
         };
     }
 
-    // 19. Identify the operating system based on a provided OS name.
+  
     public static String identifyOS(String osName) {
         String os = osName.toLowerCase();
         if (os.contains("win")) {
@@ -305,7 +296,7 @@ public class ImproveExercises {
         }
     }
 
-    // 20. Calculate a fee based on the vehicle type.
+    
     public static double calculateVehicleFee(String vehicleType) {
         return switch (vehicleType.toLowerCase()) {
             case "car" -> 10.0;
@@ -316,12 +307,12 @@ public class ImproveExercises {
         };
     }
 
-    // 21. Process user input by squaring the value (example processing).
+    
     public static int processUserInput(int input) {
         return input * input;
     }
 
-    // 22. Swap two numbers using arithmetic operations without a temporary variable.
+    
     public static int[] swapNumbers(int a, int b) {
         a = a + b;
         b = a - b;
@@ -329,25 +320,25 @@ public class ImproveExercises {
         return new int[]{a, b};
     }
 
-    // 23. Return an array of the first 10 prime numbers.
+    
     public static int[] getFirst10Primes() {
         return new int[]{2, 3, 5, 7, 11, 13, 17, 19, 23, 29};
     }
 
-    // 24. Generate a random number between 1 and 100.
+    
     public static int generateRandomNumber() {
         Random random = new Random();
         return random.nextInt(100) + 1;
     }
 
-    // 25. Get the current LocalDateTime formatted as "yyyy-MM-dd HH:mm:ss".
+ 
     public static String getFormattedCurrentDateTime() {
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         return now.format(formatter);
     }
 
-    // 26. Format a full name as "Last Name, First Name".
+   
     public static String formatName(String fullName) {
         String[] parts = fullName.trim().split("\\s+");
         if (parts.length < 2) {
@@ -358,7 +349,7 @@ public class ImproveExercises {
         return lastName + ", " + firstName;
     }
 
-    // 27. Reverse the words in a sentence using concatenation.
+   
     public static String reverseWords(String sentence) {
         String[] words = sentence.split("\\s+");
         StringBuilder reversed = new StringBuilder();
@@ -371,18 +362,18 @@ public class ImproveExercises {
         return reversed.toString();
     }
 
-    // 28. Generate a personalized URL based on the user's input.
+    
     public static String generatePersonalizedURL(String username) {
         return "www." + username.toLowerCase() + ".com";
     }
 
-    // 29. Construct a log message with a timestamp, username, and action taken.
+    
     public static String createLogMessage(String username, String action) {
         String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
         return "[" + timestamp + "] User: " + username + " performed action: " + action;
     }
 
-    // 30. Encode a string by shifting each character's ASCII value by 3.
+    
     public static String encodeString(String input) {
         StringBuilder encoded = new StringBuilder();
         for (char c : input.toCharArray()) {
@@ -391,13 +382,13 @@ public class ImproveExercises {
         return encoded.toString();
     }
 
-    // Main method providing an interactive menu using Scanner for user inputs.
+   
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             int choice = 0;
 
             while (true) {
-            // Display the menu.
+         
             System.out.println("==================================");
             System.out.println("Choose an exercise to run (1-30) or 0 to exit:");
             System.out.println(" 1.  Determine Triangle Type");
@@ -640,7 +631,7 @@ public class ImproveExercises {
     
                 default -> System.out.println("Invalid choice. Please try again.");
             }
-            System.out.println(); // Extra line for spacing.
+            System.out.println(); 
         }
         }
     }

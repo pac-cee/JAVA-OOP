@@ -3,6 +3,12 @@
  
 public class TriangleType {
     public static void main(String[] args) {
+       try(Scanner scanner = new Scanner (System.in);){
+        System.out.println("Enter the three sides of the triangle:");
+        int side1 = scanner.nextInt();
+        int side2 = scanner.nextInt();
+        int side3 = scanner.nextInt();
+       
         int side1 = 5, side2 = 5, side3 = 5;
         if (side1 == side2 && side2 == side3) {
             System.out.println("Equilateral Triangle");
@@ -11,6 +17,9 @@ public class TriangleType {
         } else {
             System.out.println("Scalene Triangle");
         }
+       }
+       
+    
     }
 }
 
