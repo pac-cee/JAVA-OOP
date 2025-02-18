@@ -1,4 +1,4 @@
-1. Write a Java method to find the smallest number among three numbers.
+1. Write a Java method to find the smallest number among three numbers. #done#
  
 2. Compute Average of Three Numbers
 

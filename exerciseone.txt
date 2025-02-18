@@ -1,0 +1,79 @@
+
+1
+EXERCISES FOR THE BASICS: 
+ 
+1.  Given three sides of a triangle, determine whether it is an equilateral, isosceles, or scalene 
+triangle. 
+2.  Check if a number is positive, negative, or zero, and also if it’s even or odd. 
+3.  Calculate an employee’s bonus based on years of service: 
+               Less than 5 years: 5% of salary 
+               5-10 years: 10% 
+              More than 10 years: 15% 
+ 
+4.  if a password meets security standards (at least 8 characters, contains a number, uppercase 
+letter, and special character). 
+5.  Given the time (0-23), print a greeting: 
+ 
+                      0-5: "Good Night" 
+                      6-11: "Good Morning" 
+                     12-17: "Good Afternoon" 
+                      18-23: "Good Evening" 
+ 
+6.  Given a number, reverse it and check if it’s a palindrome. 
+7.  Compute the BMI from height and weight, then categorize it: 
+ 
+                            BMI < 18.5: Underweight 
+                            18.5 - 24.9: Normal 
+                              25 - 29.9: Overweight 
+                             30+: Obese 
+8.  Compute an electricity bill based on usage: 
+ 
+                            First 100 units: $0.50 per unit 
+                            Next 200 units: $0.75 per unit 
+                            Above 300 units: $1.20 per unit 
+ 
+9.  Determine if a person is eligible for a loan based on income, credit score, and existing loans. 
+10.   Implement a simple game where the user plays against the computer. 
+ 
+ 
+11.   Convert a digit (0-9) to its English word equivalent (e.g., 5 → "Five"). 
+ 
+12.   Convert an amount based on user-selected currency (USD, EUR, GBP, INR, etc.). 
+ 
+13.   Users can choose a menu item, and the system returns its price. 
+ 
+14.   Convert percentage into a grade (A, B, C, D, F) and provide feedback. 
+ 
+15.   Based on the birth month and day, determine the zodiac sign. 
+ 
+16.   Given the number of sides, classify the shape (Triangle, Quadrilateral, Pentagon, etc.). 
+ 
+17.   Apply different discounts based on customer category (Regular, Premium, VIP). 
+ 
+18.   Given a chess piece name, print how it moves. 
+ 
+19.   Given an OS name, display whether it's Windows, macOS, or Linux. 
+ 
+20.   Charge a fee based on vehicle type (car, truck, motorcycle, bus). 
+ 
+ 
+21.   Assign a variable a value based on user input and process it. 
+ 
+22.   Use arithmetic operations to swap two numbers. 
+ 
+23.   Declare an array of the first 10 prime numbers and print them. 
+ 
+24.   Generate a random number between 1-100 and store it in a variable. 
+ 
+25.   Declare a LocalDateTime variable and format it into a readable string. 
+ 
+ 
+26.   Take a user's full name and format it as "Last Name, First Name". 
+ 
+27.   Given a sentence, reverse the words using concatenation. 
+ 
+28.   Take a user’s input and generate a personalized URL (e.g., www.user123.com). 
+ 
+29.   Construct a log message with a timestamp, username, and action taken. 
+ 
+30.   Convert a string into an encoded version using ASCII manipulation and concatenation. 
