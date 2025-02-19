@@ -8,7 +8,7 @@ public class AdvancedExercises {
 
     // 1. Find the smallest number among three numbers.
     public static int findSmallest(int a, int b, int c) {
-        return Math.min(a, Math.min(b, c));
+        return Integer.min(a, Integer.min(b, c));
     }
 
     // 2. Compute the average of three numbers.
