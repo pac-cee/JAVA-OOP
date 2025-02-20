@@ -1,6 +1,6 @@
-import java.util.Scanner;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 public class AllTasks {
 
@@ -49,7 +49,7 @@ public class AllTasks {
     // 6. Sum of digits in an integer
     public static int sumDigits(int n) {
         int sum = 0;
-        n = Math.abs(n);
+        n = java.lang.Math.abs((int) n);
         while (n > 0) {
             sum += n % 10;
             n /= 10;
@@ -74,7 +74,7 @@ public class AllTasks {
     // Formula: futureValue = investmentAmount * (1 + monthlyInterestRate)^(years * 12)
     public static double computeFutureInvestment(double investment, double annualRate, int years) {
         double monthlyRate = (annualRate / 100) / 12;
-        return investment * Math.pow(1 + monthlyRate, years * 12);
+        return investment * java.lang.Math.pow(1 + monthlyRate, years * 12);
     }
 
     // 9. Print characters between two characters (inclusive), printing 20 per line.
@@ -133,7 +133,7 @@ public class AllTasks {
     // 14. Calculate the area of a regular pentagon given the side length.
     // Formula: area = (1/4)*sqrt(5*(5+2*sqrt(5)))*side^2
     public static double pentagonArea(double side) {
-        return (1.0 / 4.0) * Math.sqrt(5 * (5 + 2 * Math.sqrt(5))) * side * side;
+        return (1.0 / 4.0) * java.lang.Math.sqrt(5 * (5 + 2 * java.lang.Math.sqrt(5))) * side * side;
     }
 
     // 15. Display the current date and time.
@@ -164,7 +164,7 @@ public class AllTasks {
     // 17. Count occurrences of the digit '2' in an integer.
     public static int countDigitTwo(int n) {
         int count = 0;
-        n = Math.abs(n);
+        n = java.lang.Math.abs(n);
         while (n > 0) {
             if (n % 10 == 2) {
                 count++;
@@ -188,7 +188,7 @@ public class AllTasks {
 
     // 20. Extract the first digit of an integer.
     public static int extractFirstDigit(int n) {
-        n = Math.abs(n);
+        n = java.lang.Math.abs(n);
         while (n >= 10) {
             n /= 10;
         }
@@ -197,7 +197,7 @@ public class AllTasks {
 
     // 21. Display the factors of the given integer that are divisible by 3.
     public static void displayFactorsOfThree(int n) {
-        int abs = Math.abs(n);
+        int abs = java.lang.Math.abs(n);
         for (int i = 1; i <= abs; i++) {
             if (abs % i == 0 && i % 3 == 0) {
                 System.out.print(i + " ");
@@ -207,7 +207,7 @@ public class AllTasks {
 
     // 22. Check if every digit in an integer is even.
     public static boolean areAllDigitsEven(int n) {
-        n = Math.abs(n);
+        n = java.lang.Math.abs(n);
         // Special case: if n is 0, consider it even.
         if (n == 0) return true;
         while (n > 0) {

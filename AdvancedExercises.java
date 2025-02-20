@@ -25,7 +25,7 @@ public class AdvancedExercises {
         // According to instructions: odd length → two middle characters (if possible)
         // even length → one middle character.
         if (len % 2 != 0) {
-            return (len == 1) ? s : s.substring(mid, Math.min(mid + 2, len));
+            return (len == 1) ? s : s.substring(mid, java.lang.Math.min(mid + 2, len));
         } else {
             return s.substring(mid, mid + 1);
         }
@@ -49,7 +49,7 @@ public class AdvancedExercises {
     // 6. Compute the sum of digits in an integer.
     public static int sumDigits(int number) {
         int sum = 0;
-        number = Math.abs(number);
+        number = java.lang.Math.abs(number);
         while (number > 0) {
             sum += number % 10;
             number /= 10;
@@ -72,7 +72,7 @@ public class AdvancedExercises {
     // 8. Compute the future investment value.
     public static double computeFutureInvestmentValue(double investment, double annualRate, int years) {
         double monthlyRate = (annualRate / 100) / 12;
-        return investment * Math.pow(1 + monthlyRate, years * 12);
+        return investment * java.lang.Math.pow(1 + monthlyRate, years * 12);
     }
 
     // 9. Print characters between two characters (inclusive), printing 20 per line.
@@ -126,7 +126,7 @@ public class AdvancedExercises {
 
     // 14. Calculate the area of a regular pentagon.
     public static double pentagonArea(double side) {
-        return (1.0 / 4.0) * Math.sqrt(5 * (5 + 2 * Math.sqrt(5))) * side * side;
+        return (1.0 / 4.0) * java.lang.Math.sqrt(5 * (5 + 2 * java.lang.Math.sqrt(5))) * side * side;
     }
 
     // 15. Display the current date and time.
@@ -157,7 +157,7 @@ public class AdvancedExercises {
     // 17. Count occurrences of the digit '2' in an integer.
     public static int countDigitTwo(int number) {
         int count = 0;
-        number = Math.abs(number);
+        number = java.lang.Math.abs(number);
         while (number > 0) {
             if (number % 10 == 2) count++;
             number /= 10;
@@ -179,7 +179,7 @@ public class AdvancedExercises {
 
     // 20. Extract the first digit of an integer.
     public static int extractFirstDigit(int number) {
-        number = Math.abs(number);
+        number = java.lang.Math.abs(number);
         while (number >= 10) {
             number /= 10;
         }
@@ -188,7 +188,7 @@ public class AdvancedExercises {
 
     // 21. Display the factors of the given integer that are divisible by 3.
     public static void displayFactorsOfThree(int number) {
-        number = Math.abs(number);
+        number = java.lang.Math.abs(number);
         for (int i = 1; i <= number; i++) {
             if (number % i == 0 && i % 3 == 0) {
                 System.out.print(i + " ");
@@ -199,7 +199,7 @@ public class AdvancedExercises {
 
     // 22. Check if all digits in an integer are even.
     public static boolean areAllDigitsEven(int number) {
-        number = Math.abs(number);
+        number = java.lang.Math.abs(number);
         if (number == 0) return true;
         while (number > 0) {
             int digit = number % 10;
