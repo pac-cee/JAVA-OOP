@@ -28,6 +28,7 @@ public class AdvancedExercises {
             return (len == 1) ? s : s.substring(mid, java.lang.Math.min(mid + 2, len));
         } else {
             return s.substring(mid, mid + 1);
+            
         }
     }
 
@@ -93,7 +94,7 @@ public class AdvancedExercises {
 
     // 10. Check whether a year is a leap year.
     public static boolean isLeapYear(int year) {
-        return (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0));
+        return (year<1 && (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0)));
     }
 
     // 11. Validate a password.

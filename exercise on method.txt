@@ -1,4 +1,5 @@
-1. Write a Java method to find the smallest number among three numbers. #done#
+1. Write a Java method to find the smallest 
+number among three numbers. #done#
  
 2. Compute Average of Three Numbers
 
@@ -6,9 +7,12 @@ Write a Java method to compute the average of three numbers.
  
 3. Find Middle Character(s) of String
 
-Write a Java method to display the middle character of a string.
-Note: a) If the length of the string is odd there will be two middle characters.
-b) If the length of the string is even there will be one middle character.
+Write a Java method to display the middle character
+ of a string.
+Note: a) If the length of the string is odd there will
+ be two middle characters.
+b) If the length of the string is even there will be one
+ middle character.
  
 4. Count Vowels in String
 

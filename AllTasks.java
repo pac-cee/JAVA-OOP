@@ -233,7 +233,7 @@ public class AllTasks {
 
     // Main method: prompt the user and call all methods.
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
 
         // Task 1
         System.out.println("Task 1: Find the smallest among three numbers.");
@@ -391,6 +391,7 @@ public class AllTasks {
         String vowelCheck = scanner.nextLine();
         System.out.println("All characters are vowels: " + areAllCharactersVowels(vowelCheck));
 
-        scanner.close();
+        
+     }
     }
 }

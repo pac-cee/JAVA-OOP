@@ -1,6 +1,6 @@
 public class Production {
-    private int existingStock;
-    private int newStock;
+    private final int existingStock;
+    private final int newStock;
     private static final int PRICE_PER_UNIT = 150;
     
     

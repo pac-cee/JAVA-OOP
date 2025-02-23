@@ -1,11 +1,9 @@
-import java.lang.Math;
-
 public class Bank {
 
     private double Loan(double principal) {
         double monthlyInterestRate = 1.2 / 100.0;
         int months = 12;
-        double amount = principal * Math.pow(1 + monthlyInterestRate, (double) months);
+        double amount = principal * java.lang.Math.pow(1 + monthlyInterestRate, (double) months);
         return amount;
     }
     

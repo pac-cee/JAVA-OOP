@@ -1,5 +1,3 @@
-import java.lang.Math;
-
 public class NumbersOneHun {
     public static void main(String[] args) {
         int number = 100;
@@ -17,7 +15,7 @@ public class NumbersOneHun {
             return false;
         }
         
-        for (int i = 2; i <= Math.sqrt((double) num); i++) {
+        for (int i = 2; i <= java.lang.Math.sqrt((double) num); i++) {
             if (num % i == 0) {
                 return false;
             }

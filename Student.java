@@ -1,5 +1,5 @@
 public class Student {
-    private int[] marks = new int[5];
+    private final int[] marks = new int[5];
     
 
     Student(int m1, int m2, int m3, int m4, int m5) {
