@@ -12,11 +12,19 @@ public class StudentOne {
         this.email = email;
         this.address = address;
     }
-    public StudentOne(int age, int id){
-        this.age = age;
-        this.id = id;
 
-    }
+     // Getters
+     public int getIdStudent() { return id; }
+     public int getAgeStudent() { return age; }
+     public String getNameStudent() { return name; }
+     public String getEmailStudent() { return email; }
+     public String getAddressStudent() { return address; }
+
+     // Removed setter for final variable id and age
+     public void setName(String name) { this.name = name; }
+     public void setEmail(String email) { this.email = email; }
+     public void setAddress(String address) { this.address = address; }
+ 
         
     public int getId() {
         return id;

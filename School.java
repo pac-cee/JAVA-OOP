@@ -1,9 +1,16 @@
 public class School<T extends StudentOne> {
     private final T student;
 
+    // Constructor
     public School(T student) {
         this.student = student;
     }
+
+    // Getter for student
+    public T getStudent() {
+        return student;
+    }
+
 
     public void displayStudentInfo() {
         System.out.println("Student ID: " + student.getId());
@@ -15,6 +22,9 @@ public class School<T extends StudentOne> {
     }
 
     public static void main(String[] args) {
+        System.out.println("School Information");
+        System.out.println("******************");
+        
         StudentOne studentOne = new StudentOne(
             1, 
             20, 
