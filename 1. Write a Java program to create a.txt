@@ -12,7 +12,7 @@
 
 7. Write a  program to create a class called "Bank" with a collection of accounts and methods to add and remove accounts, and to deposit and withdraw money. Also define a class called "Account" to maintain account details of a particular customer.
 
-8. Write a  program to create class called "TrafficLight" with attributes for color and duration, and methods to change the color and check for red or green.
+8. Write a  program to create class called "Traffic Light" with attributes for color and duration, and methods to change the color and check for red or green.
 
 9. Write a  program to create a class called "Employee" with a name, salary, and hire date attributes, and a method to calculate years of service.
 
