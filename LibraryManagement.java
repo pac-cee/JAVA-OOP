@@ -40,7 +40,7 @@ class Book {
 
 // Library class managing a collection of Book objects
 class Library {
-    private ArrayList<Book> books = new ArrayList<>();
+     ArrayList<Book> books = new ArrayList<>();
 
     // Add a new book to the library
     public void addBook(Book book) {
