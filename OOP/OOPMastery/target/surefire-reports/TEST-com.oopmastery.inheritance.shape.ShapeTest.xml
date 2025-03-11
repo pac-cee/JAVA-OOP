@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.oopmastery.inheritance.shape.ShapeTest" time="0.129" tests="8" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="23"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\VScode\JAVA OOP\OOP\OOPMastery\target\test-classes;D:\VScode\JAVA OOP\OOP\OOPMastery\target\classes;C:\Users\pacit\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.2\junit-jupiter-5.8.2.jar;C:\Users\pacit\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\pacit\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\pacit\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\pacit\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\pacit\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;C:\Users\pacit\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\pacit\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Africa/Kigali"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-23\bin"/>
+    <property name="sun.java.command" value="C:\Users\pacit\AppData\Local\Temp\surefire15054448672740606955\surefirebooter3883716801139778080.jar C:\Users\pacit\AppData\Local\Temp\surefire15054448672740606955 2025-03-11T20-57-17_206-jvmRun1 surefire13423129427272967864tmp surefire_010670832955534753561tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="com.oopmastery.inheritance.shape.ShapeTest"/>
+    <property name="surefire.test.class.path" value="D:\VScode\JAVA OOP\OOP\OOPMastery\target\test-classes;D:\VScode\JAVA OOP\OOP\OOPMastery\target\classes;C:\Users\pacit\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.2\junit-jupiter-5.8.2.jar;C:\Users\pacit\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\pacit\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\pacit\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\pacit\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\pacit\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;C:\Users\pacit\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\pacit\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\pacit"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-10-15"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-23"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\VScode\JAVA OOP\OOP\OOPMastery"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\pacit\AppData\Local\Temp\surefire15054448672740606955\surefirebooter3883716801139778080.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="23.0.1+11-39"/>
+    <property name="user.name" value="pacit"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="maven.ext.class.path" value="C:\Users\pacit\.vscode\extensions\oracle.oracle-java-23.1.0\nbcode\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="localRepository" value="C:\Users\pacit\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\pacit\AppData\Local\Temp\"/>
+    <property name="java.version" value="23.0.1"/>
+    <property name="user.dir" value="D:\VScode\JAVA OOP\OOP\OOPMastery"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-23\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\app\pacit\product\23ai\dbhomeFree\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Python312\Scripts\;C:\Python312\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;c:\Users\pacit\AppData\Local\Programs\cursor\resources\app\bin;C:\Program Files\Git\cmd;D:\flutter_windows_3.27.1-stable\flutter\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\pacit\Downloads\java-21-openjdk-21.0.4.0.7-1.win.jdk.x86_64\java-21-openjdk-21.0.4.0.7-1.win.jdk.x86_64\bin;C:\Program Files\Java\jdk-23\bin;C:\Program Files\MongoDB\Server\8.0\bin;C:\Users\pacit\Downloads\mongodb-windows-x86_64-8.0.4\mongodb-win32-x86_64-windows-8.0.4\bin;C:\Users\pacit\Downloads\flutter_windows_3.27.1-stable\flutter\bin;C:\Program Files\Go\bin;C:\Program Files\Git LFS;C:\Program Files\RedHat\Podman\;C:\Oracle_JDK-23\bin;C:\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin;D:\mongosh-2.3.9-win32-x64\mongosh-2.3.9-win32-x64\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Microsoft VS Code Insiders\bin;C:\MinGW\bin;C:\Ruby34-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\pacit\AppData\Local\Microsoft\WindowsApps;C:\Users\pacit\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\pacit\.dotnet\tools;C:\Users\pacit\AppData\Local\GitHubDesktop\bin;D:\flutter_windows_3.27.1-stable\flutter\bin;C:\Users\pacit\AppData\Local\Microsoft\WinGet\Packages\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\pacit\AppData\Roaming\npm;C:\Users\pacit\AppData\Local\Programs\Windsurf\bin;C:\Users\pacit\AppData\Roaming\Python\Scripts;C:\Users\pacit\AppData\Roaming\Python\Python312\Scripts;C:\Users\pacit\Downloads\java-21-openjdk-21.0.4.0.7-1.win.jdk.x86_64\java-21-openjdk-21.0.4.0.7-1.win.jdk.x86_64\bin;C:\Program Files\Java\jre1.8.0_431\bin;C:\Program Files\Java\jdk-23\bin;C:\Program Files\MongoDB\Server\8.0\bin;C:\Users\pacit\Downloads\mongodb-windows-x86_64-8.0.4\mongodb-win32-x86_64-windows-8.0.4\bin;C:\Users\pacit\Downloads\flutter_windows_3.27.1-stable\flutter\bin;C:\Users\pacit\go\bin;C:\Users\pacit\AppData\Local\Programs\Ollama;C:\Oracle_JDK-23\bin;C:\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin;D:\mongosh-2.3.9-win32-x64\mongosh-2.3.9-win32-x64\bin;C:\Users\pacit\AppData\Local\Programs\cursor\resources\app\bin;C:\MinGW\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="23.0.1+11-39"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="67.0"/>
+  </properties>
+  <testcase name="testCircleCalculations" classname="com.oopmastery.inheritance.shape.ShapeTest" time="0.064"/>
+  <testcase name="testPolymorphicBehavior" classname="com.oopmastery.inheritance.shape.ShapeTest" time="0.024"/>
+  <testcase name="testCircleCreation" classname="com.oopmastery.inheritance.shape.ShapeTest" time="0.001"/>
+  <testcase name="testRectangleCalculations" classname="com.oopmastery.inheritance.shape.ShapeTest" time="0.003"/>
+  <testcase name="testInvalidDimensions" classname="com.oopmastery.inheritance.shape.ShapeTest" time="0.008"/>
+  <testcase name="testRectangleCreation" classname="com.oopmastery.inheritance.shape.ShapeTest" time="0.001"/>
+  <testcase name="testShapeModification" classname="com.oopmastery.inheritance.shape.ShapeTest" time="0.001"/>
+  <testcase name="testSquareRectangle" classname="com.oopmastery.inheritance.shape.ShapeTest" time="0.001"/>
+</testsuite>
