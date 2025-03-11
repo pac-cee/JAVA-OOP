@@ -1,3 +1,4 @@
+package ClassWork;
 public class School<T extends StudentOne> {
     private final T student;
 

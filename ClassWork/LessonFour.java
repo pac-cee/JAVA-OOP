@@ -1,3 +1,4 @@
+package ClassWork;
 public class LessonFour {
     
     public static String ForLoopMethod (int marks) {

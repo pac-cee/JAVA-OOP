@@ -1,6 +1,8 @@
-import java.util.*;
+package ClassWork;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
+import java.util.Scanner;
 
 
 

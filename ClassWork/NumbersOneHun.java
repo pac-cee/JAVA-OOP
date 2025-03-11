@@ -1,3 +1,4 @@
+package ClassWork;
 public class NumbersOneHun {
     public static void main(String[] args) {
         int number = 100;

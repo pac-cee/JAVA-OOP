@@ -1,12 +1,13 @@
+package ClassWork;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 // Student class encapsulating student details and grades
 class Student {
-    private String name;
-    private String studentId;
-    private ArrayList<Double> grades;
+    private final String name;
+    private final String studentId;
+    private final ArrayList<Double> grades;
 
     public Student(String name, String studentId) {
         this.name = name;
@@ -47,7 +48,7 @@ class Student {
 
 // GradeManager class to manage multiple student records
 class GradeManager {
-    private ArrayList<Student> students = new ArrayList<>();
+    private final ArrayList<Student> students = new ArrayList<>();
 
     // Add a new student record
     public void addStudent(Student student) {
@@ -92,39 +93,33 @@ class GradeManager {
 }
 
 public class StudentGradeManagement {
-    private static GradeManager gradeManager = new GradeManager();
-    private static Scanner scanner = new Scanner(System.in);
-
+    private static final GradeManager gradeManager = new GradeManager();
+    private static final Scanner scanner = new Scanner(System.in);
+    
     public static void main(String[] args) {
-        int choice = 0;
-        System.out.println("Welcome to the Student Grade Management System!");
-        do {
-            displayMenu();
-            choice = getIntInput("Enter your choice: ");
-            switch (choice) {
-                case 1:
-                    addNewStudent();
-                    break;
-                case 2:
-                    addGradeToStudent();
-                    break;
-                case 3:
-                    displayStudentRecord();
-                    break;
-                case 4:
-                    displayClassAverage();
-                    break;
-                case 5:
-                    gradeManager.listStudents();
-                    break;
-                case 6:
-                    System.out.println("Exiting the system. Goodbye!");
-                    break;
-                default:
-                    System.out.println("Invalid choice. Please select from the menu.");
+        try(Scanner scanner = new Scanner(System.in)){
+            int choice = 0;
+            System.out.println("Welcome to the Student Grade Management System!");
+            do {
+                displayMenu();
+                choice = getIntInput("Enter your choice: ");
+                switch (choice) {
+                case 1 -> addNewStudent();
+                  
+                case 2 -> addGradeToStudent();
+                 
+                case 3 -> displayStudentRecord();
+                    
+                case 4 -> displayClassAverage();
+                 
+                case 5 -> gradeManager.listStudents();
+            
+                case 6 -> System.out.println("Exiting the system. Goodbye!");
+              
+                default -> System.out.println("Invalid choice. Please select from the menu.");
             }
         } while (choice != 6);
-        scanner.close();
+     }  
     }
 
     // Display menu options for grade management

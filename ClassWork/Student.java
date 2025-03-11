@@ -1,3 +1,4 @@
+package ClassWork;
 public class Student {
     private final int[] marks = new int[5];
     
