@@ -84,7 +84,7 @@ public class BookApi {
             }
 
             int id = books.size() + 1;
-            Book book = new Book(id, title);
+            Book book = new Book(String.valueOf(id), title, "defaultAuthor");
             books.add(book);
 
             String response = "{\"message\":\"Book added\", \"id\":" + id + "}";
