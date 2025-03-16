@@ -1,3 +1,4 @@
+package Mid;
 import java.util.Scanner;
 
 public class Main {
