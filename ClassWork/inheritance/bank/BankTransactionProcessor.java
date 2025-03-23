@@ -1,3 +1,4 @@
+package classwork.inheritance.bank;
 public class BankTransactionProcessor {
     private List<BankAccount> accounts = new ArrayList<>();
     

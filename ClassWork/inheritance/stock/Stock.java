@@ -1,7 +1,5 @@
-package ClassWork.inheritance.Stock;
+package classwork.inheritance.stock;
 import java.util.List;
-
-import ClassWork.inheritance.stock.InvalidStockDataException;
 
 public interface Stock {
     // Constants for validation

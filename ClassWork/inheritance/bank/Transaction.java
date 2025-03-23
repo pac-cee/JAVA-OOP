@@ -1,3 +1,4 @@
+package classwork.inheritance.bank;
 public interface Transaction {
     void deposit(double amount) throws IllegalArgumentException;
     void withdraw(double amount) throws InsufficientFundsException, DailyLimitExceededException;

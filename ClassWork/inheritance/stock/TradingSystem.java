@@ -1,8 +1,9 @@
-package ClassWork.inheritance.stock;
+package classwork.inheritance.stock;
 
 import java.util.ArrayList;
 import java.util.List;
-import ClassWork.inheritance.stock.Stock;
+
+import classwork.inheritance.stock.Stock;
 public class TradingSystem {
     private List<Stock> stocks = new ArrayList<>();
     

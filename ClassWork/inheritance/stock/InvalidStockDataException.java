@@ -1,4 +1,4 @@
-package ClassWork.inheritance.stock;
+package classwork.inheritance.stock;
 public class InvalidStockDataException extends Exception {
     public InvalidStockDataException(String message) {
         super(message);

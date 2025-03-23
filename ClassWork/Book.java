@@ -1,4 +1,4 @@
-package ClassWork;
+package classwork;
 public class Book {
     private final int id;
     private final String title;

@@ -1,4 +1,4 @@
-package ClassWork.inheritance.stock;
+package classwork.inheritance.stock;
 
 public class InsufficientSharesException extends Exception {
     
@@ -6,4 +6,3 @@ public class InsufficientSharesException extends Exception {
         super(message);
     }   
 }
-// Compare this snippet from ClassWork/inheritance/stock/Stock.java:

@@ -1,3 +1,4 @@
+package classwork.inheritance.bank;
 public interface BankAccount extends Transaction {
     String[] VALID_BANKS = {"Chase", "Bank of America", "Wells Fargo", "Citibank", "Capital One"};
     

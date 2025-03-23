@@ -1,3 +1,4 @@
+package classwork.inheritance.bank;
 public abstract class AbstractBankAccount implements BankAccount {
     private String accountNumber;
     private double balance;

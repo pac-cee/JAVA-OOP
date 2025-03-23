@@ -1,8 +1,12 @@
-package ClassWork.inheritance.stock;
+package classwork.inheritance.stock;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
+import classwork.inheritance.stock.InvalidStockDataException;
+import classwork.inheritance.stock.Stock;
 public abstract class AbstractStock implements Stock {
     private String symbol;
     private double price;

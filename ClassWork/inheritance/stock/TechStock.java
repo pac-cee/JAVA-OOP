@@ -1,4 +1,4 @@
-package ClassWork.inheritance.stock;
+package classwork.inheritance.stock;
 public class TechStock extends AbstractStock {
     private int innovationIndex;  // 0-100
     
