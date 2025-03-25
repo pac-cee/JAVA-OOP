@@ -1,6 +1,3 @@
-package classwork.inheritance.stock;
-import java.util.List;
-
 public interface Stock {
     // Constants for validation
     List<String> VALID_EXCHANGES = List.of("NYSE", "NASDAQ", "LSE");
