@@ -1,0 +1,137 @@
+. Employee Management System  
+
+    Problem: Create an abstract class Employee with fields like name, id, salary, and department. The class should include abstract methods for calculateBonus() and displayEmployeeInfo(). Then, create two subclasses Manager and Developer that inherit from Employee and implement the abstract methods.
+
+    Task:
+
+        Define the Employee class as abstract with calculateBonus() and displayEmployeeInfo() as abstract methods.
+
+        Implement the Manager and Developer classes that override these methods.
+
+        Use encapsulation to protect the salary, id, and other fields using getters and setters.
+
+        In the Manager class, the bonus is 20% of salary, and in the Developer class, it is 10%.
+
+        Display employee details and calculated bonus using displayEmployeeInfo().
+
+2. Shape Class Hierarchy 
+
+    Problem: Create an abstract class Shape with an abstract method area(). Then, create subclasses Circle, Rectangle, and Triangle that extend Shape and implement the area() method.
+
+    Task:
+
+        Define the abstract Shape class with a method area() and a name field.
+
+        The Circle class should have a radius, the Rectangle class should have length and width, and the Triangle class should have base and height.
+
+        Implement the area() method for each subclass.
+
+        Use polymorphism to calculate the area of different shapes in a main class.
+
+3. Bank Account System  
+
+    Problem: Create an abstract class BankAccount with fields like accountNumber, balance, and methods for deposit(double amount) and withdraw(double amount). Then, create subclasses CheckingAccount and SavingsAccount that inherit from BankAccount.
+
+    Task:
+
+        Define the abstract class BankAccount with abstract methods like deposit() and withdraw().
+
+        Create the CheckingAccount class that charges a fee on withdrawal and the SavingsAccount class that calculates interest on the balance.
+
+        Use encapsulation to hide the balance and other sensitive fields.
+
+        Implement interest calculation in SavingsAccount and fee deduction in CheckingAccount.
+
+4. Vehicle Class with Abstract Methods (Abstract Classes)
+
+    Problem: Create an abstract class Vehicle with abstract methods like startEngine() and stopEngine(). Then, create subclasses Car and Bike that implement these methods.
+
+    Task:
+
+        Define the Vehicle class as abstract with methods startEngine() and stopEngine().
+
+        Implement the methods in the Car and Bike classes.
+
+        Display the starting and stopping engine process in both Car and Bike classes.
+
+        Use polymorphism in the main method to demonstrate that both classes can be used interchangeably.
+
+5. Library Management System  
+
+    Problem: Create a library system with an abstract class Book that contains fields for title, author, isbn, and a method borrowBook(). Then, create subclasses PrintedBook and EBook that extend Book and implement the borrowBook() method differently.
+
+    Task:
+
+        Define the abstract Book class with common fields and an abstract method borrowBook().
+
+        Implement the PrintedBook and EBook subclasses with different borrowing rules (e.g., printed books have a due date while eBooks may have a licensing rule).
+
+        Use encapsulation for the book fields and access them using getters and setters.
+
+6. Online Payment System  
+
+    Problem: Create an interface PaymentMethod with methods pay(double amount) and refund(double amount). Create an abstract class OnlinePayment that implements PaymentMethod and adds a method getTransactionId(). Then, create subclasses CreditCard and PayPal that extend OnlinePayment.
+
+    Task:
+
+        Define an interface PaymentMethod with the methods pay() and refund().
+
+        Create an abstract class OnlinePayment that implements PaymentMethod and adds the method getTransactionId().
+
+        Create the CreditCard and PayPal classes that implement pay() and refund() methods differently.
+
+        Demonstrate polymorphism in the main class by processing payments using different payment methods.
+
+7. Student Database System  
+
+    Problem: Create an abstract class Student with fields like name, age, and grade. Then, create subclasses UndergraduateStudent and GraduateStudent that extend Student. Implement an additional method to display specific details for each type of student.
+
+    Task:
+
+        Define the abstract Student class with common fields and an abstract method displayDetails().
+
+        Implement the UndergraduateStudent class to show the courses they are enrolled in.
+
+        Implement the GraduateStudent class to display the thesis title they are working on.
+
+        Use encapsulation to protect student data (e.g., name, age, grade).
+
+8. Animal Sounds  
+
+    Problem: Create an abstract class Animal with an abstract method makeSound(). Then create subclasses like Dog, Cat, and Cow that extend Animal and provide their own implementation for the makeSound() method.
+
+    Task:
+
+        Define the abstract class Animal with the method makeSound().
+
+        Create subclasses Dog, Cat, and Cow that implement makeSound() differently.
+
+        Use polymorphism to handle different types of animals and call makeSound() in the main method.
+
+9. Employee Payroll System  
+
+    Problem: Create an abstract class Employee with a method calculatePay(). Then, create subclasses SalariedEmployee and HourlyEmployee that implement calculatePay() in different ways.
+
+    Task:
+
+        Define the abstract Employee class with fields like name and basePay and an abstract method calculatePay().
+
+        Implement SalariedEmployee and HourlyEmployee subclasses with their own pay calculation logic.
+
+        Calculate and display the payroll for multiple employees in the main method.
+
+        Use encapsulation to protect employee data.
+
+10. Shape Drawing Program 
+
+    Problem: Create an interface Drawable with a method draw(). Then create an abstract class Shape that implements Drawable and add a color field. Create subclasses like Circle, Rectangle, and Triangle that implement draw().
+
+    Task:
+
+        Define the Drawable interface with a draw() method.
+
+        Create an abstract Shape class that implements Drawable and has a field color.
+
+        Implement the Circle, Rectangle, and Triangle classes with specific implementations of draw().
+
+        Use polymorphism to draw different shapes with different colors in the main method
