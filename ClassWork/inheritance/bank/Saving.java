@@ -1,4 +1,3 @@
-package classwork.inheritance.bank;
 public class SavingsAccount extends AbstractBankAccount {
     private static final double MINIMUM_BALANCE = 500.0;
     private static final double PENALTY_RATE = 0.02;  // 2%

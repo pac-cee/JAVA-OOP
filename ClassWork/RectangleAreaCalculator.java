@@ -1,4 +1,4 @@
-package ClassWork;
+package classwork;
 import java.util.Scanner;
 
 public class RectangleAreaCalculator {

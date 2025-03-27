@@ -1,4 +1,4 @@
-package ClassWork;
+package classwork;
 public class Production {
     private final int existingStock;
     private final int newStock;

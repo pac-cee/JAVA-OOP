@@ -1,4 +1,4 @@
-package ClassWork;
+package classwork;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

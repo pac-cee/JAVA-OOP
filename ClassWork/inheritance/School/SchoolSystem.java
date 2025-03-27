@@ -1,3 +1,4 @@
+package classwork.inheritance.School;
 public class SchoolSystem {
     private List<SchoolMember> members = new ArrayList<>();
     

@@ -1,4 +1,4 @@
-package ClassWork;
+package classwork;
 public class ClassExercises {
     public class Person {
         private final String name;

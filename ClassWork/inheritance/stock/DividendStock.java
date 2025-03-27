@@ -1,4 +1,4 @@
-package ClassWork.inheritance.stock;
+package classwork.inheritance.stock;
 
 public class DividendStock extends AbstractStock {
     private double dividendYield;  // 0-15%
