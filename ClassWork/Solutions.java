@@ -1,39 +1,97 @@
-import java.util.*;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+package ClassWork;
+
+import java.util.Arrays;
+import java.util.InputMismatchException;
+import java.util.List;
+import java.util.Scanner;
 
 public class Solutions {
 
     public static void main(String[] args) {
-        System.out.println("=== Exercise 1: Employee Management System ===");
-        EmployeeManagementDemo.demo();
-
-        System.out.println("\n=== Exercise 2: Shape Class Hierarchy ===");
-        ShapeHierarchyDemo.demo();
-
-        System.out.println("\n=== Exercise 3: Bank Account System ===");
-        BankAccountDemo.demo();
-
-        System.out.println("\n=== Exercise 4: Vehicle Class with Abstract Methods ===");
-        VehicleDemo.demo();
-
-        System.out.println("\n=== Exercise 5: Library Management System ===");
-        LibraryDemo.demo();
-
-        System.out.println("\n=== Exercise 6: Online Payment System ===");
-        OnlinePaymentDemo.demo();
-
-        System.out.println("\n=== Exercise 7: Student Database System ===");
-        StudentDatabaseDemo.demo();
-
-        System.out.println("\n=== Exercise 8: Animal Sounds ===");
-        AnimalSoundsDemo.demo();
-
-        System.out.println("\n=== Exercise 9: Employee Payroll System ===");
-        PayrollSystemDemo.demo();
-
-        System.out.println("\n=== Exercise 10: Shape Drawing Program ===");
-        ShapeDrawingDemo.demo();
+        try (Scanner scanner = new Scanner(System.in)) {
+            boolean running = true;
+            
+            while (running) {
+                System.out.println("\n=== OOP Exercise Menu ===");
+                System.out.println("1. Employee Management System");
+                System.out.println("2. Shape Class Hierarchy");
+                System.out.println("3. Bank Account System");
+                System.out.println("4. Vehicle Class with Abstract Methods");
+                System.out.println("5. Library Management System");
+                System.out.println("6. Online Payment System");
+                System.out.println("7. Student Database System");
+                System.out.println("8. Animal Sounds");
+                System.out.println("9. Employee Payroll System");
+                System.out.println("10. Shape Drawing Program");
+                System.out.println("0. Exit");
+                System.out.print("\nEnter your choice (0-10): ");
+                
+                try {
+                    int choice = scanner.nextInt();
+                    System.out.println();
+                    
+                    switch (choice) {
+                        case 0:
+                            running = false;
+                            System.out.println("Goodbye!");
+                            break;
+                        case 1:
+                            System.out.println("=== Exercise 1: Employee Management System ===");
+                            EmployeeManagementDemo.demo();
+                            
+                            
+                            break;
+                        case 2:
+                            System.out.println("=== Exercise 2: Shape Class Hierarchy ===");
+                            ShapeHierarchyDemo.demo();
+                            break;
+                        case 3:
+                            System.out.println("=== Exercise 3: Bank Account System ===");
+                            BankAccountDemo.demo();
+                            break;
+                        case 4:
+                            System.out.println("=== Exercise 4: Vehicle Class with Abstract Methods ===");
+                            VehicleDemo.demo();
+                            break;
+                        case 5:
+                            System.out.println("=== Exercise 5: Library Management System ===");
+                            LibraryDemo.demo();
+                            break;
+                        case 6:
+                            System.out.println("=== Exercise 6: Online Payment System ===");
+                            OnlinePaymentDemo.demo();
+                            break;
+                        case 7:
+                            System.out.println("=== Exercise 7: Student Database System ===");
+                            StudentDatabaseDemo.demo();
+                            break;
+                        case 8:
+                            System.out.println("=== Exercise 8: Animal Sounds ===");
+                            AnimalSoundsDemo.demo();
+                            break;
+                        case 9:
+                            System.out.println("=== Exercise 9: Employee Payroll System ===");
+                            PayrollSystemDemo.demo();
+                            break;
+                        case 10:
+                            System.out.println("=== Exercise 10: Shape Drawing Program ===");
+                            ShapeDrawingDemo.demo();
+                            break;
+                        default:
+                            System.out.println("Invalid choice. Please enter a number between 0 and 10.");
+                    }
+                } catch (InputMismatchException e) {
+                    System.out.println("Invalid input. Please enter a number.");
+                    scanner.nextLine(); // Clear invalid input
+                }
+                
+                if (running) {
+                    System.out.println("\nPress Enter to continue...");
+                    scanner.nextLine(); // Clear the newline
+                    scanner.nextLine(); // Wait for Enter
+                }
+            }
+        }
     }
 
     // ----------------------------------------------------------------------
@@ -136,7 +194,7 @@ public class Solutions {
 
         @Override
         public double area() {
-            return Math.PI * radius * radius;
+            return java.lang.Math.PI * radius * radius;
         }
     }
 

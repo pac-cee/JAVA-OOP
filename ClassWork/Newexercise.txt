@@ -1,10 +1,14 @@
 . Employee Management System  
 
-    Problem: Create an abstract class Employee with fields like name, id, salary, and department. The class should include abstract methods for calculateBonus() and displayEmployeeInfo(). Then, create two subclasses Manager and Developer that inherit from Employee and implement the abstract methods.
+    Problem: Create an abstract class Employee with fields like name, id, salary, 
+    and department. The class should include abstract methods for calculateBonus() 
+    and displayEmployeeInfo(). Then, create two subclasses Manager and Developer that
+     inherit from Employee and implement the abstract methods.
 
     Task:
 
-        Define the Employee class as abstract with calculateBonus() and displayEmployeeInfo() as abstract methods.
+        Define the Employee class as abstract with calculateBonus() and displayEmployeeInfo() as
+         abstract methods.
 
         Implement the Manager and Developer classes that override these methods.
 
@@ -16,13 +20,16 @@
 
 2. Shape Class Hierarchy 
 
-    Problem: Create an abstract class Shape with an abstract method area(). Then, create subclasses Circle, Rectangle, and Triangle that extend Shape and implement the area() method.
+    Problem: Create an abstract class Shape with an abstract method area(). Then, 
+    create subclasses Circle, Rectangle, and Triangle that extend Shape and implement the 
+    area() method.
 
     Task:
 
         Define the abstract Shape class with a method area() and a name field.
 
-        The Circle class should have a radius, the Rectangle class should have length and width, and the Triangle class should have base and height.
+        The Circle class should have a radius, the Rectangle class should have length and width, 
+        and the Triangle class should have base and height.
 
         Implement the area() method for each subclass.
 
@@ -30,13 +37,16 @@
 
 3. Bank Account System  
 
-    Problem: Create an abstract class BankAccount with fields like accountNumber, balance, and methods for deposit(double amount) and withdraw(double amount). Then, create subclasses CheckingAccount and SavingsAccount that inherit from BankAccount.
+    Problem: Create an abstract class BankAccount with fields like accountNumber, 
+    balance, and methods for deposit(double amount) and withdraw(double amount). Then, 
+    create subclasses CheckingAccount and SavingsAccount that inherit from BankAccount.
 
     Task:
 
         Define the abstract class BankAccount with abstract methods like deposit() and withdraw().
 
-        Create the CheckingAccount class that charges a fee on withdrawal and the SavingsAccount class that calculates interest on the balance.
+        Create the CheckingAccount class that charges a fee on withdrawal and the SavingsAccount 
+        class that calculates interest on the balance.
 
         Use encapsulation to hide the balance and other sensitive fields.
 
@@ -44,7 +54,8 @@
 
 4. Vehicle Class with Abstract Methods (Abstract Classes)
 
-    Problem: Create an abstract class Vehicle with abstract methods like startEngine() and stopEngine(). Then, create subclasses Car and Bike that implement these methods.
+    Problem: Create an abstract class Vehicle with abstract methods like startEngine() and 
+    stopEngine(). Then, create subclasses Car and Bike that implement these methods.
 
     Task:
 
@@ -54,23 +65,30 @@
 
         Display the starting and stopping engine process in both Car and Bike classes.
 
-        Use polymorphism in the main method to demonstrate that both classes can be used interchangeably.
+        Use polymorphism in the main method to demonstrate that both classes can be used 
+        interchangeably.
 
 5. Library Management System  
 
-    Problem: Create a library system with an abstract class Book that contains fields for title, author, isbn, and a method borrowBook(). Then, create subclasses PrintedBook and EBook that extend Book and implement the borrowBook() method differently.
+    Problem: Create a library system with an abstract class Book that contains fields for title, 
+    author, isbn, and a method borrowBook(). Then, create subclasses PrintedBook and EBook that 
+    extend Book and implement the borrowBook() method differently.
 
     Task:
 
         Define the abstract Book class with common fields and an abstract method borrowBook().
 
-        Implement the PrintedBook and EBook subclasses with different borrowing rules (e.g., printed books have a due date while eBooks may have a licensing rule).
+        Implement the PrintedBook and EBook subclasses with different borrowing rules (e.g., printed 
+        books have a due date while eBooks may have a licensing rule).
 
         Use encapsulation for the book fields and access them using getters and setters.
 
 6. Online Payment System  
 
-    Problem: Create an interface PaymentMethod with methods pay(double amount) and refund(double amount). Create an abstract class OnlinePayment that implements PaymentMethod and adds a method getTransactionId(). Then, create subclasses CreditCard and PayPal that extend OnlinePayment.
+    Problem: Create an interface PaymentMethod with methods pay(double amount) and
+     refund(double amount). Create an abstract class OnlinePayment that implements PaymentMethod 
+     and adds a method getTransactionId(). Then, create subclasses CreditCard and PayPal that extend 
+     OnlinePayment.
 
     Task:
 
