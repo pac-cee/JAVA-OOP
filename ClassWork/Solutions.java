@@ -31,54 +31,51 @@ public class Solutions {
                     System.out.println();
                     
                     switch (choice) {
-                        case 0:
+                        case 0 -> {
                             running = false;
                             System.out.println("Goodbye!");
-                            break;
-                        case 1:
+                        }
+                        case 1 -> {
                             System.out.println("=== Exercise 1: Employee Management System ===");
                             EmployeeManagementDemo.demo();
-                            
-                            
-                            break;
-                        case 2:
+                        }
+                        case 2 -> {
                             System.out.println("=== Exercise 2: Shape Class Hierarchy ===");
                             ShapeHierarchyDemo.demo();
-                            break;
-                        case 3:
+                        }
+                        case 3 -> {
                             System.out.println("=== Exercise 3: Bank Account System ===");
                             BankAccountDemo.demo();
-                            break;
-                        case 4:
+                        }
+                        case 4 -> {
                             System.out.println("=== Exercise 4: Vehicle Class with Abstract Methods ===");
                             VehicleDemo.demo();
-                            break;
-                        case 5:
+                        }
+                        case 5 -> {
                             System.out.println("=== Exercise 5: Library Management System ===");
                             LibraryDemo.demo();
-                            break;
-                        case 6:
+                        }
+                        case 6 -> {
                             System.out.println("=== Exercise 6: Online Payment System ===");
                             OnlinePaymentDemo.demo();
-                            break;
-                        case 7:
+                        }
+                        case 7 -> {
                             System.out.println("=== Exercise 7: Student Database System ===");
                             StudentDatabaseDemo.demo();
-                            break;
-                        case 8:
+                        }
+                        case 8 -> {
                             System.out.println("=== Exercise 8: Animal Sounds ===");
                             AnimalSoundsDemo.demo();
-                            break;
-                        case 9:
+                        }
+                        case 9 -> {
                             System.out.println("=== Exercise 9: Employee Payroll System ===");
                             PayrollSystemDemo.demo();
-                            break;
-                        case 10:
+                        }
+                        case 10 -> {
                             System.out.println("=== Exercise 10: Shape Drawing Program ===");
                             ShapeDrawingDemo.demo();
-                            break;
-                        default:
-                            System.out.println("Invalid choice. Please enter a number between 0 and 10.");
+                        }
+                        default -> System.out.println("Invalid choice. Please enter a number between 0 and 10.");
                     }
                 } catch (InputMismatchException e) {
                     System.out.println("Invalid input. Please enter a number.");
