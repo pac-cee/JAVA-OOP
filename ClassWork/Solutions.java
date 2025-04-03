@@ -85,9 +85,17 @@ public class Solutions {
                 if (running) {
                     System.out.println("\nPress Enter to continue...");
                     scanner.nextLine(); // Clear the newline
-                    scanner.nextLine(); // Wait for Enter
+                    if (scanner.hasNextLine()) {  // Check if there's another line to read
+                        scanner.nextLine(); // Wait for Enter
+                    }
                 }
             }
+        } catch (InputMismatchException e) {
+            System.out.println("Input error: " + e.getMessage());
+        } catch (RuntimeException e) {
+            System.out.println("Runtime error: " + e.getMessage());
+        } catch (Throwable e) {
+            System.out.println("Unexpected error: " + e.getMessage());
         }
     }
 
@@ -164,6 +172,13 @@ public class Solutions {
             manager.displayEmployeeInfo();
             System.out.println();
             developer.displayEmployeeInfo();
+        }
+
+        // This method is added to support the EmployeeManagementSystem class from the previous file
+        public static void runInputSystem(Scanner scanner) {
+            // This method could implement functionality from the EmployeeManagementSystem class
+            // but we'll use the demo method for simplicity
+            demo();
         }
     }
 

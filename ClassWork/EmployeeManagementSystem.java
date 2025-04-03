@@ -1,195 +1,97 @@
-package classwork;
-import java.util.ArrayList;
+package ClassWork;
+// EmployeeManagementSystem.java
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-// Employee class encapsulating employee details
-class Employee {
-    private int id;
-    private String name;
-    private String position;
-    private double salary;
-
-    public Employee(int id, String name, String position, double salary) {
-        this.id = id;
-        this.name = name;
-        this.position = position;
-        this.salary = salary;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
-    }
-
-    @Override
-    public String toString() {
-        return "ID: " + id + " | Name: " + name + " | Position: " + position + " | Salary: " + salary;
-    }
-}
-
-// EmployeeManager class to perform CRUD operations on employees
-class EmployeeManager {
-    private ArrayList<Employee> employees = new ArrayList<>();
-
-    // Add a new employee
-    public void addEmployee(Employee emp) {
-        employees.add(emp);
-        System.out.println("Employee added successfully.");
-    }
-
-    // Update employee details
-    public void updateEmployee(int id, String newPosition, double newSalary) {
-        Employee emp = findEmployeeById(id);
-        if (emp != null) {
-            emp.setPosition(newPosition);
-            emp.setSalary(newSalary);
-            System.out.println("Employee updated successfully.");
-        } else {
-            System.out.println("Employee not found.");
-        }
-    }
-
-    // Remove an employee by id
-    public void removeEmployee(int id) {
-        Employee emp = findEmployeeById(id);
-        if (emp != null) {
-            employees.remove(emp);
-            System.out.println("Employee removed successfully.");
-        } else {
-            System.out.println("Employee not found.");
-        }
-    }
-
-    // List all employees
-    public void listEmployees() {
-        if (employees.isEmpty()) {
-            System.out.println("No employee records available.");
-            return;
-        }
-        for (Employee emp : employees) {
-            System.out.println(emp);
-        }
-    }
-
-    // Helper method to find employee by id
-    private Employee findEmployeeById(int id) {
-        for (Employee emp : employees) {
-            if (emp.getId() == id)
-                return emp;
-        }
-        return null;
-    }
-}
-
 public class EmployeeManagementSystem {
-    private static EmployeeManager manager = new EmployeeManager();
-    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int choice = 0;
-        System.out.println("Welcome to the Employee Management System!");
-        do {
-            displayMenu();
-            choice = getIntInput("Enter your choice: ");
-            switch (choice) {
-                case 1:
-                    addNewEmployee();
-                    break;
-                case 2:
-                    updateEmployee();
-                    break;
-                case 3:
-                    removeEmployee();
-                    break;
-                case 4:
-                    manager.listEmployees();
-                    break;
-                case 5:
-                    System.out.println("Exiting the system. Goodbye!");
-                    break;
-                default:
-                    System.out.println("Invalid choice. Please try again.");
+        // Using try-with-resources to ensure the scanner is closed automatically.
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Welcome to the Employee Management System");
+
+            int type = getEmployeeType(scanner);
+            String name = getName(scanner);
+            int id = getId(scanner);
+            double salary = getSalary(scanner);
+            String department = getDepartment(scanner);
+
+            // Create the appropriate Employee instance.
+            Employee employee;
+            if (type == 1) {
+                employee = new Manager(name, id, salary, department);
+            } else { // type must be 2
+                employee = new Developer(name, id, salary, department);
             }
-        } while (choice != 5);
-        scanner.close();
+
+            // Display employee details and bonus.
+            System.out.println("\nEmployee Details:");
+            employee.displayEmployeeInfo();
+
+        } catch (Throwable t) {
+            // This catch block handles any errors or exceptions that were not caught elsewhere.
+            System.out.println("A serious error occurred: " + t.getMessage());
+        }
     }
 
-    // Display menu options for employee management
-    private static void displayMenu() {
-        System.out.println("\nMenu:");
-        System.out.println("1. Add New Employee");
-        System.out.println("2. Update Employee");
-        System.out.println("3. Remove Employee");
-        System.out.println("4. List All Employees");
-        System.out.println("5. Exit");
-    }
-
-    // Add a new employee
-    private static void addNewEmployee() {
-        int id = getIntInput("Enter employee ID: ");
-        System.out.print("Enter employee name: ");
-        String name = scanner.nextLine();
-        System.out.print("Enter employee position: ");
-        String position = scanner.nextLine();
-        double salary = getDoubleInput("Enter employee salary: ");
-        Employee emp = new Employee(id, name, position, salary);
-        manager.addEmployee(emp);
-    }
-
-    // Update employee details
-    private static void updateEmployee() {
-        int id = getIntInput("Enter employee ID to update: ");
-        System.out.print("Enter new position: ");
-        String position = scanner.nextLine();
-        double salary = getDoubleInput("Enter new salary: ");
-        manager.updateEmployee(id, position, salary);
-    }
-
-    // Remove an employee
-    private static void removeEmployee() {
-        int id = getIntInput("Enter employee ID to remove: ");
-        manager.removeEmployee(id);
-    }
-
-    // Get integer input with validation
-    private static int getIntInput(String prompt) {
-        int value = 0;
+    // Prompts the user for the employee type until a valid integer (1 or 2) is entered.
+    private static int getEmployeeType(Scanner scanner) {
         while (true) {
-            System.out.print(prompt);
+            System.out.println("Enter employee type (1 for Manager, 2 for Developer):");
             try {
-                value = scanner.nextInt();
-                scanner.nextLine(); // clear newline
-                break;
+                int type = scanner.nextInt();
+                scanner.nextLine(); // clear newline character
+                if (type == 1 || type == 2) {
+                    return type;
+                } else {
+                    System.out.println("Invalid type. Please enter 1 for Manager or 2 for Developer.");
+                }
             } catch (InputMismatchException e) {
-                System.out.println("Invalid input. Please enter an integer value.");
-                scanner.nextLine();
+                System.out.println("Input mismatch error: Please enter an integer (1 or 2).");
+                scanner.nextLine(); // clear the invalid input
             }
         }
-        return value;
     }
 
-    // Get double input with validation
-    private static double getDoubleInput(String prompt) {
-        double value = 0;
+    // Prompts the user to enter a name.
+    private static String getName(Scanner scanner) {
+        System.out.println("Enter Name:");
+        return scanner.nextLine();
+    }
+
+    // Prompts the user for an integer ID until valid input is entered.
+    private static int getId(Scanner scanner) {
         while (true) {
-            System.out.print(prompt);
+            System.out.println("Enter ID (integer):");
             try {
-                value = scanner.nextDouble();
+                int id = scanner.nextInt();
                 scanner.nextLine(); // clear newline
-                break;
+                return id;
             } catch (InputMismatchException e) {
-                System.out.println("Invalid input. Please enter a valid number.");
-                scanner.nextLine();
+                System.out.println("Input mismatch error: Please enter a valid integer for ID.");
+                scanner.nextLine(); // clear the invalid input
             }
         }
-        return value;
+    }
+
+    // Prompts the user for a salary (as a decimal) until valid input is entered.
+    private static double getSalary(Scanner scanner) {
+        while (true) {
+            System.out.println("Enter Salary (decimal):");
+            try {
+                double salary = scanner.nextDouble();
+                scanner.nextLine(); // clear newline
+                return salary;
+            } catch (InputMismatchException e) {
+                System.out.println("Input mismatch error: Please enter a valid decimal number for Salary.");
+                scanner.nextLine(); // clear the invalid input
+            }
+        }
+    }
+
+    // Prompts the user to enter a department.
+    private static String getDepartment(Scanner scanner) {
+        System.out.println("Enter Department:");
+        return scanner.nextLine();
     }
 }

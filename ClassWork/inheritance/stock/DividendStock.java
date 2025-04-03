@@ -1,5 +1,8 @@
 package classwork.inheritance.stock;
 
+import build.AbstractStock;
+import build.InvalidStockDataException;
+
 public class DividendStock extends AbstractStock {
     private double dividendYield;  // 0-15%
     

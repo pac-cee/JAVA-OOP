@@ -1,3 +1,9 @@
+import build.AbstractStock;
+import build.InsufficientSharesException;
+import build.InvalidStockDataException;
+import build.InvalidTransactionException;
+import build.Stock;
+
 public class TradingSystem {
     private List<Stock> stocks = new ArrayList<>();
     

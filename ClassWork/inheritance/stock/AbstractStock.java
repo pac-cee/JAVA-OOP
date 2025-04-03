@@ -1,3 +1,6 @@
+import build.InvalidStockDataException;
+import build.Stock;
+
 public abstract class AbstractStock implements Stock {
     private String symbol;
     private double price;
