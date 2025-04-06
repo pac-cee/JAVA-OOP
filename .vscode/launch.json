@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BusManagementApp",
+            "request": "launch",
+            "mainClass": "projects.bus.BusManagementApp",
+            "projectName": "JAVA OOP_b324b61e"
+        },
+        {
+            "type": "java",
             "name": "EmployeeManagementSystem",
             "request": "launch",
             "mainClass": "EmployeeManagementSystem",
