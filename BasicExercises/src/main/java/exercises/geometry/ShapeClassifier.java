@@ -24,14 +24,14 @@ public class ShapeClassifier {
     }
 
     public static String getChessPieceMovement(String piece) {
-        switch (piece.toLowerCase()) {
-            case "pawn": return "Moves forward one square at a time, captures diagonally";
-            case "rook": return "Moves horizontally or vertically any number of squares";
-            case "knight": return "Moves in an L-shape: 2 squares in one direction and 1 square perpendicular";
-            case "bishop": return "Moves diagonally any number of squares";
-            case "queen": return "Moves in any direction (horizontal, vertical, or diagonal) any number of squares";
-            case "king": return "Moves one square in any direction";
-            default: return "Unknown chess piece";
-        }
+        return switch (piece.toLowerCase()) {
+            case "pawn" -> "Moves forward one square at a time, captures diagonally";
+            case "rook" -> "Moves horizontally or vertically any number of squares";
+            case "knight" -> "Moves in an L-shape: 2 squares in one direction and 1 square perpendicular";
+            case "bishop" -> "Moves diagonally any number of squares";
+            case "queen" -> "Moves in any direction (horizontal, vertical, or diagonal) any number of squares";
+            case "king" -> "Moves one square in any direction";
+            default -> "Unknown chess piece";
+        };
     }
 }
