@@ -1,0 +1,320 @@
+Exercise 1: Advanced Stock Management System
+Scenario:
+
+You are tasked to design an Advanced Stock Management System for a company that sells a variety of products. The system must help administrators and employees manage product stock, track inventory, generate reports, and ensure smooth sales operations.
+Abstract Class: StockItem
+
+This is the base class for all stock items (products).
+Attributes:
+
+    itemId (String)
+
+    itemName (String)
+
+    quantityInStock (int)
+
+    pricePerUnit (double)
+
+    category (String) – e.g., "Electronics", "Clothing", "Groceries"
+
+    supplier (String)
+
+Abstract Methods:
+
+    updateStock(int quantity)
+
+    calculateStockValue()
+
+    generateStockReport()
+
+    validateStock()
+
+Concrete Classes (5 Total):
+1. ElectronicsItem (extends StockItem)
+
+    Validates stock quantity should be above zero for sale.
+
+    Adds functionality for warranty period.
+
+    Includes a method to apply discounts on electronic items.
+
+2. ClothingItem (extends StockItem)
+
+    Calculates the stock value based on item price and discount availability.
+
+    Ensures stock is available in different sizes and colors.
+
+3. GroceryItem (extends StockItem)
+
+    Adds expiration date for each product.
+
+    Ensures that products nearing expiration are flagged for discount.
+
+4. FurnitureItem (extends StockItem)
+
+    Adds a weight attribute for shipping calculation.
+
+    Validates that all furniture items are well packed before delivery.
+
+5. PerishableItem (extends StockItem)
+
+    Validates that perishable items like fruits and vegetables have a short shelf life.
+
+    Generates an alert if stock needs to be disposed of due to expiration.
+
+Encapsulation (3 Classes):
+Class: Product
+
+    productId, productName, brand, supplier, stockQuantity
+
+    Validate input values for product name, quantity, and brand.
+
+Class: Supplier
+
+    supplierId, companyName, contactPerson, phone, email
+
+    Ensure that the supplier's contact details are valid and well formatted.
+
+Class: Warehouse
+
+    warehouseId, location, capacity, managerName
+
+    Tracks stock movement and inventory across different locations.
+
+Validations:
+
+    Stock quantity must not be negative.
+
+    Product name should be unique.
+
+    Price per unit must be above zero.
+
+    Discount should not exceed 50%.
+
+    Warranty periods must be within a valid range.
+
+Report Generation:
+
+    Generate a detailed inventory report with:
+
+        Item name, quantity, stock value, and category.
+
+        Any expired or nearly expired items.
+
+        Discounts applied and sales performance.
+use Scanner and display all information 
+---------------------------------------------------------------------------
+Exercise 2: Advanced Online Shopping System
+Scenario:
+
+Design an Advanced Online Shopping System that simulates a shopping experience for customers. The system must handle product listings, shopping carts, order processing, and payment, while ensuring proper validation and reporting.
+Abstract Class: ShoppingItem
+
+This class serves as the base class for all items available in the online store.
+Attributes:
+
+    itemId (String)
+
+    itemName (String)
+
+    itemDescription (String)
+
+    price (double)
+
+    stockAvailable (int)
+
+Abstract Methods:
+
+    updateStock(int quantity)
+
+    addToCart(Customer customer)
+
+    generateInvoice(Customer customer)
+
+    validateItem()
+
+Concrete Classes (5 Total):
+1. ElectronicsItem (extends ShoppingItem)
+
+    Handles warranties and product registration.
+
+    Validates the availability of stock for electronic products.
+
+2. ClothingItem (extends ShoppingItem)
+
+    Handles size selection and stock validation for different clothing sizes.
+
+    Provides discounts on seasonal clothing items.
+
+3. GroceriesItem (extends ShoppingItem)
+
+    Validates expiration dates for food items.
+
+    Provides discounts on bulk purchases.
+
+4. BooksItem (extends ShoppingItem)
+
+    Manages ISBN for books.
+
+    Validates availability of editions and print quality.
+
+5. AccessoriesItem (extends ShoppingItem)
+
+    Manages stock for accessories and validates the variety.
+
+    Adds customer reviews and ratings for each product.
+
+Encapsulation (3 Classes):
+Class: Customer
+
+    customerId, customerName, email, address, phone
+
+    Ensures that all personal details are validated before proceeding with checkout.
+
+Class: ShoppingCart
+
+    cartId, cartItems, totalPrice, customer
+
+    Ensures that items are added or removed based on stock availability.
+
+Class: Payment
+
+    paymentId, paymentMethod, amountPaid, transactionDate
+
+    Ensures that the payment amount matches the total price and validates the payment method.
+
+Validations:
+
+    Item quantity in cart should not exceed stock available.
+
+    Payment method should be valid (e.g., Credit Card, PayPal).
+
+    Delivery address should be complete and valid.
+
+    Item details like price, size, and availability should be verified before adding to cart.
+
+Report Generation:
+
+    Generates a sales report, including:
+
+        Total revenue, item sales, and customer orders.
+
+        Payment breakdown by method.
+
+        Order fulfillment and shipping status.
+Display all inputed information , use Scanner to capture the information 
+===================================================
+Exercise 3: Advanced Motor Vehicle Insurance System
+Scenario:
+
+Design an Advanced Motor Vehicle Insurance System to manage vehicle insurance policies, claims, and premium calculations. The system should be able to handle different types of vehicles and policies, ensuring proper validation, claims processing, and reporting.
+Abstract Class: InsurancePolicy
+
+This is the base class for all insurance policies.
+Attributes:
+
+    policyId (String)
+
+    vehicle (Vehicle)
+
+    policyHolder (Person)
+
+    coverageAmount (double)
+
+    premiumAmount (double)
+
+    policyStartDate (LocalDate)
+
+    policyEndDate (LocalDate)
+
+Abstract Methods:
+
+    calculatePremium()
+
+    processClaim(double claimAmount)
+
+    generatePolicyReport()
+
+    validatePolicy()
+
+Concrete Classes (5 Total):
+1. ComprehensivePolicy (extends InsurancePolicy)
+
+    Covers both damage and theft.
+
+    Validates vehicle type and model year.
+
+    Calculates premium based on vehicle age.
+
+2. ThirdPartyPolicy (extends InsurancePolicy)
+
+    Covers third-party liability only.
+
+    Calculates premium based on the vehicle’s engine capacity.
+
+    Includes additional coverage options.
+
+3. CollisionPolicy (extends InsurancePolicy)
+
+    Covers collision damage only.
+
+    Provides discounts for safe drivers.
+
+    Requires vehicle safety check before policy approval.
+
+4. LiabilityPolicy (extends InsurancePolicy)
+
+    Covers third-party liability only.
+
+    Requires a medical checkup of the policyholder.
+
+    Adds an option for extended coverage in case of long-term disability.
+
+5. RoadsideAssistancePolicy (extends InsurancePolicy)
+
+    Covers emergency assistance like towing and tire repairs.
+
+    Offers coverage for both private and commercial vehicles.
+
+    Requires verification of the vehicle’s registration and inspection.
+
+Encapsulation (3 Classes):
+Class: Vehicle
+
+    vehicleId, vehicleMake, vehicleModel, vehicleYear, vehicleType
+
+    Ensures that all vehicle details are validated.
+
+Class: Person
+
+    personId, fullName, dob, email, phone
+
+    Validates that personal details match a policyholder's profile.
+
+Class: Claim
+
+    claimId, claimAmount, claimDate, claimStatus
+
+    Ensures the claim amount does not exceed the policy coverage limit.
+
+Validations:
+
+    Insurance policy must be validated against the vehicle type and coverage.
+
+    Claim amount should not exceed the policy’s coverage.
+
+    Vehicle details should be updated during insurance renewal.
+
+    All claims must undergo approval and validation.
+
+Report Generation:
+
+    Generates a detailed report, including: same as display
+
+        Total premiums collected.
+
+        Total claims processed and their status.
+
+        Coverage breakdown by policy type.
+
+Remember to use Scanner 
