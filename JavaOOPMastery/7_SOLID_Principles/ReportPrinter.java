@@ -1,11 +1,6 @@
-public class Report {
-    String content;
-    Report(String content) { this.content = content; }
-}
-
 public class ReportPrinter {
     void print(Report report) {
-        System.out.println("Printing report: " + report.content);
+        System.out.println("Printing report: " + report.getContent());
     }
     public static void main(String[] args) {
         Report r = new Report("OOP Principles");

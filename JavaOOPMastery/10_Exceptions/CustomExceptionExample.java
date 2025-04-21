@@ -1,8 +1,5 @@
-class NegativeNumberException extends Exception {
-    NegativeNumberException(String msg) { super(msg); }
-}
-
 import java.util.Scanner;
+
 public class CustomExceptionExample {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
