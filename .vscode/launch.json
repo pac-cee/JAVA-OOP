@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "StockManagementFrame",
+            "request": "launch",
+            "mainClass": "asss1.Assignment1Solution.Exercise1_StockManagement.StockManagementFrame",
+            "projectName": "JAVA OOP_b324b61e"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "asss1.Assignment1Solution.Exercise1_StockManagement.Main",
+            "projectName": "JAVA OOP_b324b61e"
+        },
+        {
+            "type": "java",
             "name": "BusManagementApp",
             "request": "launch",
             "mainClass": "projects.bus.BusManagementApp",

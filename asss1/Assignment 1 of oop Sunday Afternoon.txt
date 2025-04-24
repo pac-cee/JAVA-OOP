@@ -1,7 +1,9 @@
 Exercise 1: Advanced Stock Management System
 Scenario:
 
-You are tasked to design an Advanced Stock Management System for a company that sells a variety of products. The system must help administrators and employees manage product stock, track inventory, generate reports, and ensure smooth sales operations.
+You are tasked to design an Advanced Stock Management System for a company that sells a variety of products. 
+The system must help administrators and employees manage product stock, track inventory, generate reports, 
+and ensure smooth sales operations.
 Abstract Class: StockItem
 
 This is the base class for all stock items (products).
