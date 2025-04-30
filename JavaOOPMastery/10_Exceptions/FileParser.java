@@ -1,5 +1,8 @@
 // FileParser project: demonstrates advanced exception handling and custom exceptions
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 class InvalidFileFormatException extends Exception {
     public InvalidFileFormatException(String message) {

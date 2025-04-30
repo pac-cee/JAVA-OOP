@@ -1,4 +1,3 @@
-    }
     public void study() {
         System.out.println(name + " is studying.");
     }
@@ -9,4 +8,4 @@
         alice.study(); // Output: Alice is studying.
         alice.setAge(-5); // Output: Age cannot be negative!
     }
-}
+

@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AdvancedExercises",
+            "request": "launch",
+            "mainClass": "ClassWork.AdvancedExercises",
+            "projectName": "JAVA OOP_b324b61e"
+        },
+        {
+            "type": "java",
+            "name": "AllTasks",
+            "request": "launch",
+            "mainClass": "ClassWork.AllTasks",
+            "projectName": "JAVA OOP_b324b61e"
+        },
+        {
+            "type": "java",
+            "name": "ArrayExamples",
+            "request": "launch",
+            "mainClass": "ArrayExamples",
+            "projectName": "JAVA OOP_b324b61e"
+        },
+        {
+            "type": "java",
             "name": "StockManagementFrame",
             "request": "launch",
             "mainClass": "asss1.Assignment1Solution.Exercise1_StockManagement.StockManagementFrame",
