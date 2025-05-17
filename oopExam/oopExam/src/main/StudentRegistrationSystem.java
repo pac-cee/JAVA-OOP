@@ -1,9 +1,10 @@
 package main;
 
+import java.util.Scanner;
+
 import abstracts.StudentManagement;
 import foreign.ForeignStudent;
 import informationmanagement.InformationManagementStudent;
-import java.util.Scanner;
 import networking.NetworkingStudent;
 import softwareengineering.SoftwareEngineeringStudent;
 import utils.DateUtils;
@@ -45,17 +46,22 @@ public class StudentRegistrationSystem {
 
     private static StudentManagement createStudent(int choice) {
         switch (choice) {
-            case 1:
+            case 1 -> {
                 return new SoftwareEngineeringStudent();
-            case 2:
+            }
+            case 2 -> {
                 return new NetworkingStudent();
-            case 3:
+            }
+            case 3 -> {
                 return new InformationManagementStudent();
-            case 4:
+            }
+            case 4 -> {
                 return new ForeignStudent();
-            default:
+            }
+            default -> {
                 System.out.println("Invalid choice!");
                 return null;
+            }
         }
     }
 
