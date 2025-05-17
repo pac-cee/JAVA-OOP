@@ -65,12 +65,24 @@ public class ContactManager {
             command = sc.nextLine().trim().toLowerCase();
             switch (command) {
                 case "add":
-                    System.out.print("Name: ");
-                    String name = sc.nextLine();
-                    System.out.print("Phone: ");
-                    String phone = sc.nextLine();
-                    System.out.print("Email: ");
-                    String email = sc.nextLine();
+                      System.out.print("Name: ");
+		      String name = sc.nextLine();
+        	      while (name == null || name.trim().isEmpty() || !name.matches("[a-zA-Z ]+")) {
+          	     System.out.print("Invalid. Enter Name (letters only): ");
+            	     name = sc.nextLine();
+          	}    
+        	     System.out.print("Email: ");
+        	     String email = sc.nextLine();
+        	     while (email == null || !email.contains("@")) {
+            	     System.out.print("Invalid. Enter Email: ");
+            	     email = sc.nextLine();
+        }
+		    System.out.print("Phone: ");
+        	    String phone = sc.nextLine();
+        	    while (phone == null || phone.length() < 10) {
+            	    System.out.print("Invalid. Enter Phone (min 10 digits): ");
+            	    phone = sc.nextLine();
+        }
                     manager.addContact(new Contact(name, phone, email));
                     break;
                 case "remove":

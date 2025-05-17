@@ -1,4 +1,8 @@
 // Contact class for Contact Manager Project
+// - Implement a `Contact` class with fields (name, phone, email), methods for updating info, and static tracking of contact count.
+//Create a `ContactManager` class to add, search, and remove contacts from an ArrayList.
+// Add serialization to save/load contacts to a file.
+
 import java.io.Serializable;
 
 public class Contact implements Serializable {
