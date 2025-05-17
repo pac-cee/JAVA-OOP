@@ -19,7 +19,7 @@ private static int getIntInput(String prompt) {
             int value = Integer.parseInt(input);
             return value;
         } catch (NumberFormatException e) {
-            System.out.println("Invalid input. Please enter a valid integer (e.g., 42).");
+            System.out.println("Invalid input. Please enter a valid integer.");
         }
     }
 }

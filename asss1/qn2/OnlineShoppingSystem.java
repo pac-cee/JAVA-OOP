@@ -40,7 +40,7 @@ public class OnlineShoppingSystem {
         }
         System.out.print("Email: ");
         String email = sc.nextLine();
-        while (email == null || !email.contains("@")) {
+        while (email == null || !email.contains("@") || !email.contains(".") || !email.matches(".*@.*\\..*")) {
             System.out.print("Invalid. Enter Email: ");
             email = sc.nextLine();
         }
@@ -52,8 +52,8 @@ public class OnlineShoppingSystem {
         }
         System.out.print("Phone: ");
         String phone = sc.nextLine();
-        while (phone == null || phone.length() < 7) {
-            System.out.print("Invalid. Enter Phone (min 7 digits): ");
+        while (phone == null || phone.length() < 10 || !phone.matches("\\d+")) {
+            System.out.print("Invalid. Enter Phone (min 10 digits): ");
             phone = sc.nextLine();
         }
         Customer customer = new Customer(cid, name, email, address, phone);
